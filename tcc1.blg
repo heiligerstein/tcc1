@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: tcc1.aux
+The style file: abnt-alf.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: abnt-options.bib
+Database file #2: reflatex.bib
+Repeated entry---line 317 of file reflatex.bib
+ : @misc{aoe_specification
+ :                        ,
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "raid-patterson"
+refers to entry "DBLP:conf/sigmod/88", which doesn't exist
+Warning--I didn't find a database entry for "abnt-etal-list=99"
+Warning--I didn't find a database entry for "rotulo"
+Warning--I didn't find a database entry for "DBLP:conf/sigmod/88"
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
++---------------------------------------------------------+
+| Estilo bibliografico abnt-alf.bst versao 1.52           |
+| Implementa a NBR6023, NBR10520 e NBR10523               |
+| Em caso de duvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 35 entries,
+            6523 wiz_defined-function locations,
+            1357 strings with 14380 characters,
+and the built_in function-call counts, 27966 in all, are:
+= -- 2950
+> -- 518
+< -- 17
++ -- 441
+- -- 159
+* -- 1668
+:= -- 3465
+add.period$ -- 141
+call.type$ -- 37
+change.case$ -- 279
+chr.to.int$ -- 49
+cite$ -- 32
+duplicate$ -- 1079
+empty$ -- 2450
+format.name$ -- 762
+if$ -- 7358
+int.to.chr$ -- 3
+int.to.str$ -- 2
+missing$ -- 577
+newline$ -- 181
+num.names$ -- 90
+pop$ -- 705
+preamble$ -- 1
+purify$ -- 122
+quote$ -- 0
+skip$ -- 2509
+stack$ -- 1
+substring$ -- 1061
+swap$ -- 505
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 112
+warning$ -- 0
+while$ -- 171
+width$ -- 0
+write$ -- 509
+(There were 2 error messages)

@@ -1,0 +1,314 @@
+%% Exemplo de utilizacao do estilo de formatacao normas-utf-tex (http://normas-utf-tex.sourceforge.net)
+%% Autores: Hugo Vieira Neto (hvieir@utfpr.edu.br)
+%%          Diogo Rosa Kuiaski (diogo.kuiaski@gmail.com)
+%% Colaboradores:
+%%          CÃ©zar M. Vargas Benitez <cesarvargasb@gmail.com>
+%%          Marcos Talau <talau@users.sourceforge.net>
+
+\documentclass[openright]{normas-utf-tex} %openright = o capitulo comeca sempre em paginas impares
+%\documentclass[oneside]{normas-utf-tex} %oneside = para dissertacoes com numero de paginas menor que 100 (apenas frente da folha)
+
+\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abnt-alf}
+\usepackage{url}
+%\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abntcite} %configuracao correta das referencias bibliograficas.
+
+
+\usepackage[brazilian]{babel} % pacote portugues brasileiro
+\usepackage[latin1]{inputenc} % pacote para acentuacao direta
+\usepackage{amsmath,amsfonts,amssymb} % pacote matematico
+\usepackage{graphicx} % pacote grafico
+\usepackage{times} % fonte times
+
+%Podem utilizar GEOMETRY{...} para realizar pequenos ajustes das margens. Onde, left=esquerda, right=direita, top=superior, bottom=inferior. P.ex.:
+%\geometry{left=3.0cm,right=1.5cm,top=4cm,bottom=1cm} 
+
+% ---------- Preambulo ----------
+\instituicao{Faculdades Integradas do Brasil - Unibrasil} % nome da instituicao
+\programa{Curso de Bacharelado em Sistemas de Informação} % nome do programa
+\area{Sistemas de Informação} % [Engenharia Biom\'edica] ou [Inform\'atica Industrial] ou [Telem\'atica]
+
+%\documento{Disserta\c{c}\~ao} % [Disserta\c{c}\~ao] ou [Tese]
+\documento{Projeto de TCC} % [Disserta\c{c}\~ao] ou [Tese]
+\nivel{Graduação} % [Mestrado] ou [Doutorado]
+\titulacao{Graduado} % [Mestre] ou [Doutor]
+
+\titulo{\MakeUppercase{Compartilhamento de Arquivos em Storage de Alta Disponibilidade}} % titulo do trabalho em portugues
+\title{\MakeUppercase{File Sharing with High-Available Storage}} % titulo do trabalho em ingles
+
+\autor{Leonardo Antônio dos Santos} % autor do trabalho
+\cita{SANTOS, Leonardo} % sobrenome (maiusculas), nome do autor do trabalho
+
+\palavraschave{AoE, ATA, Ethernet, Storage} % palavras-chave do trabalho
+\keywords{AoE, ATA, Ethernet, Storage} % palavras-chave do trabalho em ingles
+
+%\comentario{\UTFPRdocumentodata\ apresentado ao \UTFPRprogramadata\ da \ABNTinstituicaodata\ como requisito parcial para obten\c{c}\~ao do grau de ``\UTFPRtitulacaodata\ em Ci\^encias'' -- \'Area de Concentra\c{c}\~ao: \UTFPRareadata.}
+\comentario{\UTFPRdocumentodata\ apresentado ao \UTFPRprogramadata\ da \ABNTinstituicaodata.}
+
+
+\orientador{Msc. Dionei Marcelo Moraes} % nome do orientador do trabalho
+%\orientador[Orientadora:]{Nome da Orientadora} % <- no caso de orientadora, usar esta sintaxe
+\coorientador{Msc. Pedro Eugênio Rocha} % nome do co-orientador do trabalho, caso exista
+%\coorientador[Co-orientadora:]{Nome da Co-orientadora} % <- no caso de co-orientadora, usar esta sintaxe
+%\coorientador[Co-orientadores:]{Nome do Co-orientador} % no caso de 2 co-orientadores, usar esta sintaxe
+%\coorientadorb{Nome do Co-orientador 2}	% este comando inclui o nome do 2o co-orientador
+
+\local{Curitiba} % cidade
+\data{\the\year} % ano automatico
+
+
+%---------- Inicio do Documento ----------
+\begin{document}
+
+\capa % geracao automatica da capa
+\folhaderosto % geracao automatica da folha de rosto
+%\termodeaprovacao % <- ainda a ser implementado corretamente
+
+% dedicatÃƒÂƒÃ‚Â³ria (opcional)
+%\begin{dedicatoria}
+%Texto da dedicat\'oria.
+%\end{dedicatoria}
+
+% agradecimentos (opcional)
+%\begin{agradecimentos}
+%Texto dos agradecimentos.
+%\end{agradecimentos}
+
+% epigrafe (opcional)
+%\begin{epigrafe}
+%Texto da ep\'igrafe.
+%\end{epigrafe}
+
+%%resumo
+%\begin{resumo}
+%Texto do resumo (m\'aximo de 500 palavras).
+%\end{resumo}
+
+%%abstract
+%\begin{abstract}
+%Abstract text (maximum of 500 words).
+%\end{abstract}
+
+%% listas (opcionais, mas recomenda-se a partir de 5 elementos)
+%\listadefiguras % geracao automatica da lista de figuras
+%\listadetabelas % geracao automatica da lista de tabelas
+%\listadesiglas % geracao automatica da lista de siglas
+%\listadesimbolos % geracao automatica da lista de simbolos
+
+%% sumario
+\sumario % geracao automatica do sumario
+
+
+%---------- Inicio do Texto ----------
+% recomenda-se a escrita de cada capitulo em um arquivo texto separado (exemplo: intro.tex, fund.tex, exper.tex, concl.tex, etc.) e a posterior inclusao dos mesmos no mestre do documento utilizando o comando \input{}, da seguinte forma:
+%\input{intro.tex}
+%\input{fund.tex}
+%\input{exper.tex}
+%\input{concl.tex}
+
+
+%---------- Primeiro Capitulo ----------
+\chapter{Introdu\c{c}\~ao}
+\label{introducao}
+
+As tecnologias têm se tornado cada vez mais essenciais ao dia a dia das empresas e das pessoas. Grandes corporações têm utilizado sistemas informatizados para gerenciar as suas linhas de produção, sistemas de controle de estoque e compartilhamento de arquivos. Especialmente sobre o compartilhamento de arquivos, os volumes de dados têm aumentado em proporção cada vez maior. Basta observar o crescimento de serviços de armazenamento de dados famosos como YouTube\cite{youtube}, 4shared\cite{4shared} e Source Forge\cite{sourceforge}.
+
+Além da necessidade de compartilhamento de grandes quantidades de dados, grande parte das empresas possuem informações que precisam ser armazenados de forma segura e com alta disponibilidade, ou seja, a informação necessita estar disponível quase todo tempo, senão todo o tempo.
+
+Assim, é fácil pensar em juntar vários HDs (\textit{Hard Disk} - Disco Rígido) a fim de solucionar o problema do compartilhamento de arquivos. Mas esta solução, apesar de parecer fácil, na prática não funciona lançando mão para isto de métodos de compartilhamento de arquivos tradicionais, como CIFS, NFS ou SAMBA - protocolos para compartilhamento de arquivos para sistemas de arquivos (\textit{filesystems}) como \textit{Windows} ou \textit{Linux}. A justificativa para isto é porque estes métodos compartilham apenas os arquivos e não os dispositivos de armazenamento, tornando inviável o gerenciamento deste dispositivo de forma remota.
+
+Neste contexto, surgiram outros protocolos para compartilhamento de dispositivos de armazenamento de dados (ou \textit{block devices}), sendo os principais deles o iSCSI\cite{iscsi_rfc} e o Fibre Channel\cite{fibre_channel}. Ambos os protocolos cumprem os objetivos do armazenamento de dados de forma segura, com alta disponibilidade e para grandes quantidades de arquivos. Os principais problemas que envolvem estes protocolos são o alto custo de tecnologia e a dependência de hardware específico para implementação.
+
+O ATA Over Ethernet é um protocolo \textit{open source} (código aberto) desenvolvido pela empresa Coraid \cite{aoe_specification} e disponibilizado à comunidade de ciências da computação a fim de ser estudado e melhorado em sua implementação. Ele resolve os problemas mais comuns do FibreChannel e iSCSI que são, respectivamente, alto custo e sobrecarga de rede.
+
+%\begin{espacosimples}
+
+\section{Problema}
+\label{problema}
+
+Falta de uma área de armazenamento de dados compartilhada entre todo o corpo docente e discente da UniBrasil.
+
+Alto custo nas tecnologias de armazenamento de dados para compartilhamento de alta disponibilidade.
+
+\section{Objetivo Geral}
+\label{objetivo_geral}
+
+Implementar o uso de um protocolo e uma aplicação web que, integrados, permitam compartilhar arquivos com alta disponibilidade na intranet da UniBrasil e na internet.
+
+\section{Objetivos Específicos}
+\label{objetivos_especificos}
+
+- Estudar sobre protocolos de rede, alta disponibilidade de dados, analise de performance e aplicações web;
+
+- Avaliar tecnologias paralelas que já encontram-se em uso no mercado;
+
+- Implementar o uso do protocolo adaptando-o a uma infraestrutura capaz de compartilhar dados pela intranet e pela internet via web de forma distribuída;
+
+- Desenvolver sistema web que facilite o uso desta tecnologia ao usuário final.
+
+\section{Justificativa}
+\label{justificativa}
+
+O compartilhamento de arquivos, apesar de ser simples utilizando as ferramentas conhecidas, torna-se muito custoso quando se busca implementar grandes áreas de armazenamento de dados, principalmente se forem distribuídos e com alta disponibilidade. Isto acontece devido ao fato desta implementação ser possível somente com a compra de equipamentos especializados para este fim.
+
+O protocolo AoE aparece com a finalidade de resolver problemas de compartilhamento de arquivos, só que a um baixo custo de tecnologia, se comparado a protocolos para filesystems (sistemas de arquivos) distribuídos.
+
+Uma implementação completa deste protocolo juntamente com uma ferramenta Web que facilitará e orquestrará o seu uso.
+
+%\chapter{Revisão de Literatura}
+%\label{revisao_literatura}
+
+%[Ainda a completar...]
+
+%\chapter{Trabalhos Correlatos}
+%\label{trabalhos_correlatos}
+
+\chapter{Metodologia da Pesquisa}
+\label{metodologia_pesquisa}
+
+\section{Parte I - Natureza da pesquisa}
+\label{natureza_pesquisa}
+
+Redes de Computadores e Sistemas Distribuídos (Protocolos de Comunicação, Arquitetura de Clusters e Servidores, Sistemas Distribuídos, Alta Disponibilidade).
+
+\section{Parte II - Tipo de pesquisa}
+\label{tipo_pesquisa}
+
+Aplicada e Bibliográfica.
+
+\section{Parte III - Levantamento de requisitos}
+\label{levantamento_requisitos}
+
+Levantamento das necessidades de compartilhamento de arquivos utilizando-se de mecanismos como entrevistas e análise dos sistemas existentes.
+
+
+\section{Descrição e Justificativa das Tecnologias Aplicadas no Trabalho}
+\label{descricao_justificativa_tecn}
+
+As principais tecnologias utilizadas serão:
+
+\textbf{PROTOCOLOS: }
+
+\textit{AoE (Ata over Ethernet): } protocolo utilizado na comunicação entre os dispositivos de armazenamento de dados, ou discos rígidos.
+
+\textit{LDAP (Lightweight Directory Access Protocol): }protocolo de autenticação dos usuários que terão acesso aos dados compartilhados. Possui sua base de dados centralizada.
+
+
+\textbf{LINGUAGENS:}
+
+\textit{PHP (Hypertext Preprocessor):} linguagem de programação web que será utilizada no desenvolvimento do site para compartilhamento de dados entre os usuários.
+
+\textit{MySQL:} banco de dados onde ficarão armazenados os meta-dados dos arquivos armazenados, assim como os respectivos relacionamentos destes arquivos com os seus usuários.
+
+
+\textbf{FERRAMENTAS:}
+
+\textit{AoE Tools:} conjunto de ferramentas utilizadas para implementação do protocolo AoE.
+
+\textit{CakePHP Development Framework 1.3}: framework que agiliza o desenvolvimento de sites através da linguagem PHP.
+
+\textit{MySQL Server 5.5:} implementação do servidor de banco de dados MySQL.
+
+\textit{OpenLDAP:} Implementação \textit{open source} do servidor de diretórios LDAP.
+
+\textit{Linux Debian 5:} sistema operacional \textit{open source} que será utilizado para a implementação.
+
+\textit{Apache HTTP Server 2.2}: servidor web \textit{open source}.
+
+%\section{Análise dos Riscos do Projeto}
+%\label{analise_riscos_proj}
+
+\section{Arquitetura da Solução} % Arquitetura/Modelagem/Topologia/
+\label{arquitetura_projeto}
+
+A arquitetura para a solução apresentada é semelhante à Figura \ref{arquitetura}.
+
+\begin{figure}[h]
+    \includegraphics[scale=0.45]{Diagrama1.pdf}
+	\centering
+    \caption{Arquitetura da Solução.}
+    \label{arquitetura}
+\end{figure} 
+
+\section{Análise de Performance} % Testes
+\label{analise_perf}
+
+Serão executados testes de análise de performance sobre o protocolo, a rede, os discos e outras tecnologias envolvidas, como o servidor Web e o servidor de banco de dados.
+
+%\chapter{Apresentação da Solução Tecnológica} % Apresentação da Solução Tecnológica
+%\label{apresentacao_solucao_tecn}
+
+%[A preencher...]
+
+\chapter{Conclusão} % Conclusão e Trabalhos Futuros
+\label{conclusao}
+
+Este trabalho visa facilitar o uso de um protocolo código-aberto para o compartilhamento de arquivos em alta disponibilidade, tornando esta tarefa acessível a qualquer pessoa que assim o desejar.
+
+Com a crescente demanda sobre esta área, principalmente no que se refere à virtualização de servidores, o que necessita de um armazenamento distribuído, este trabalho tenta trazer simplicidade ao uso de protocolos de armazenamento de dados para estas novas tendências, em especial por este recurso poder ser utilizado por qualquer pessoa, por conta de sua característica de software livre.
+
+Para trabalhos futuros, podem ser efetuadas mudanças no próprio protocolo, visando o aumento da sua performance em situações específicas, como no caso da sua utilização em conjunto com RAID (\textit{Redundant Array of Independent Drives}).
+
+\chapter{Cronograma}
+\label{cronograma}
+
+O cronograma \ref{cronograma_fig} representa apenas uma hipótese temporal projeto a ser desenvolvido, podendo ser adaptado ao longo do projeto.
+
+\begin{figure}[h]
+    \includegraphics[scale=0.7]{cronograma.png}
+	\centering
+    \caption{Cronograma do Projeto.}
+    \label{cronograma_fig}
+\end{figure} 
+
+
+%---------- Referencias ----------
+%\bibliographystyle{abnt-alf} % habilita colchetes
+\bibliography{reflatex} % geracao automatica das referencias a partir do arquivo reflatex.bib
+
+
+%%---------- Apendices (opcionais) ----------
+%\apendice
+%\chapter{Nome do Ap\^endice}
+
+%Use o comando {\ttfamily \textbackslash apendice} e depois comandos {\ttfamily \textbackslash chapter\{\}} para gerar t\'itulos de ap\^en-dices.
+
+
+%% ---------- Anexos (opcionais) ----------
+%\anexo
+%\chapter{Nome do Anexo}
+
+%Use o comando {\ttfamily \textbackslash anexo} e depois comandos {\ttfamily \textbackslash chapter\{\}}
+%para gerar t\'itulos de anexos.
+
+
+% --------- Lista de siglas --------
+%\textbf{* Observa\c{c}\~oes:} a lista de siglas nao realiza a ordenacao das siglas em ordem alfabetica
+% Em breve isso sera implementado, enquanto isso:
+%\textbf{Sugest\~ao:} crie outro arquivo .tex para siglas e utilize o comando \sigla{sigla}{descri\c{c}\~ao}.
+%Para incluir este arquivo no final do arquivo, utilize o comando \input{arquivo.tex}.
+%Assim, Todas as siglas serao geradas na ultima pagina. Entao, devera excluir a ultima pagina da versao final do arquivo
+% PDF do seu documento.
+
+
+%-------- Citacoes ---------
+% - Utilize o comando \citeonline{...} para citacoes com o seguinte formato: Autor et al. (2011).
+% Este tipo de formato eh utilizado no comeco do paragrafo. P.ex.: \citeonline{autor2011}
+
+% - Utilize o comando \cite{...} para citacoeses no meio ou final do paragrafo. P.ex.: \cite{autor2011}
+
+
+
+%-------- Titulos com nomes cientificos (titulo, capitulos e secoes) ----------
+% Regra para escrita de nomes cientificos:
+% Os nomes devem ser escritos em italico, 
+%a primeira letra do primeiro nome deve ser em maiusculo e o restante em minusculo (inclusive a primeira letra do segundo nome).
+% VEJA os exemplos abaixo.
+% 
+% 1) voce nao quer que a secao fique com uppercase (caixa alta) automaticamente:
+%\section[nouppercase]{\MakeUppercase{Estudo dos efeitos da radiacao ultravioleta C e TFD em celulas de} {\textit{Saccharomyces boulardii}}
+%
+% 2) por padrao os cases (maiusculas/minuscula) sao ajustados automaticamente, voce nao precisa usar makeuppercase e afins.
+% \section{Introducao} % a introducao sera posta no texto como INTRODUCAO, automaticamente, como a norma indica.
+
+
+\end{document}

@@ -1,0 +1,64 @@
+%% Creator: Inkscape inkscape 0.48.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'raid0.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}
+    \renewcommand\color[2][]{}%
+  }
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}
+    \renewcommand\transparent[1]{}%
+  }
+  \providecommand\rotatebox[2]{#2}
+  \ifx\svgwidth\undefined
+    \setlength{\unitlength}{595.27558594pt}
+  \else
+    \setlength{\unitlength}{\svgwidth}
+  \fi
+  \global\let\svgwidth\undefined
+  \makeatother
+  \begin{picture}(1,1.4142857)%
+    \put(0,0){\includegraphics[width=\unitlength]{raid0.pdf}}%
+    \put(0.07270621,1.20476074){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 12}}}%
+    \put(0.07197354,1.24789235){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 1}}}%
+    \put(0.0719735,1.29054396){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 4}}}%
+    \put(0.071832,1.33336071){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 0}}}%
+    \put(0.21298071,1.20540159){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 13}}}%
+    \put(0.21220976,1.24853316){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 1}}}%
+    \put(0.21220972,1.29118478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 5}}}%
+    \put(0.21206819,1.33400153){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 1}}}%
+    \put(0.35234393,1.20599101){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 14}}}%
+    \put(0.35208415,1.24912261){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 10}}}%
+    \put(0.3515761,1.29177421){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 6}}}%
+    \put(0.35143458,1.33459097){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 2}}}%
+    \put(0.49105213,1.20627479){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 15}}}%
+    \put(0.49079152,1.24940641){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 11}}}%
+    \put(0.49030061,1.29205801){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 7}}}%
+    \put(0.49015908,1.33487476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Faixa 3}}}%
+  \end{picture}%
+\endgroup

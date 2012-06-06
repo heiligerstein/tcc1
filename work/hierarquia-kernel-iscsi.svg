@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="Novo documento 1">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath3318"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3320"
+         d="m 575.5,727.48401 -255.10001,0 0,-152.62401 255.10001,0 0,152.62401 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath3302"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path3304"
+         d="m 575.5,727.48401 -255.10001,0 0,-152.62401 255.10001,0 0,152.62401 z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="345.66551"
+     inkscape:cy="873.1146"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="950"
+     inkscape:window-x="0"
+     inkscape:window-y="48"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g7070"
+       transform="translate(13.000001,29)">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 181.64907,95.81471 150.23873,0 0,79.71877 -150.23873,0 0,-79.71877 z"
+         style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3206" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 181.64907,62.087227 73.58625,0 0,30.661263 -73.58625,0 0,-30.661263 z"
+         style="fill:#e0e0e0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3208" />
+      <text
+         style="font-size:15px"
+         y="74.351776"
+         x="193.91351"
+         id="text3212">
+        <tspan
+           id="tspan3214"
+           sodipodi:role="line"
+           y="74.351776"
+           x="193.91351 201.88293 208.02008 214.15723 216.91669 219.98529 222.74475 229.48901 235.008 238.07654"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">VFS / Ext3</tspan>
+        <tspan
+           id="tspan3216"
+           sodipodi:role="line"
+           y="86.616096"
+           x="193.91351 200.05066 203.1192 206.18774 211.08862 215.38245 220.90143 225.19519 228.26379 233.16461"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Filesystem</tspan>
+      </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 261.36781,62.087227 70.52,0 0,30.661263 -70.52,0 0,-30.661263 z"
+         style="fill:#c0c0c0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3220" />
+      <text
+         style="font-size:15px"
+         y="80.483978"
+         x="267.5"
+         id="text3224">
+        <tspan
+           id="tspan3226"
+           sodipodi:role="line"
+           y="80.483978"
+           x="267.5 274.8623 280.38129 284.05695 287.7326 292.63348 296.30914 299.06866 306.43097 311.33185 316.23273 321.75177"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Buffer Cache</tspan>
+      </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 233.77282,98.88097 45.99125,0 0,21.46249 -45.99125,0 0,-21.46249 z"
+         style="fill:none;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3230" />
+      <text
+         style="font-size:15px"
+         y="108.07889"
+         x="249.10352"
+         id="text3234">
+        <tspan
+           id="tspan3236"
+           sodipodi:role="line"
+           y="108.07889"
+           x="249.10352 254.55872"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">SR</tspan>
+        <tspan
+           id="tspan3238"
+           sodipodi:role="line"
+           y="117.27717"
+           x="239.90521 243.17249 249.71674 254.6225 257.88971 262.79547 270.42883 274.24548"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">(Cdroms)</tspan>
+      </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 282.83033,98.88097 45.99125,0 0,21.46249 -45.99125,0 0,-21.46249 z"
+         style="fill:none;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3242" />
+      <text
+         style="font-size:15px"
+         y="108.07889"
+         x="301.22729"
+         id="text3246">
+        <tspan
+           id="tspan3248"
+           sodipodi:role="line"
+           y="108.07889"
+           x="301.22729 306.6825"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">ST</tspan>
+        <tspan
+           id="tspan3250"
+           sodipodi:role="line"
+           y="117.27717"
+           x="292.02899 295.2962 301.29108 305.64734 310.5531 314.90942 318.72607"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">(Tapes)</tspan>
+      </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 184.71532,98.88097 45.99125,0 0,21.46249 -45.99125,0 0,-21.46249 z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3254" />
+      <text
+         style="font-size:15px"
+         y="108.07889"
+         x="200.04578"
+         id="text3258">
+        <tspan
+           id="tspan3260"
+           sodipodi:role="line"
+           y="108.07889"
+           x="200.04578 205.50098"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">SD</tspan>
+        <tspan
+           id="tspan3262"
+           sodipodi:role="line"
+           y="117.27717"
+           x="193.91357 197.18085 204.26471 206.99231 210.80902 215.71478 219.53143"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">(Disks)</tspan>
+      </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 184.71532,123.4097 144.10751,0 0,21.4625 -144.10751,0 0,-21.4625 z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3266" />
+      <text
+         style="font-size:15px"
+         y="138.73997"
+         x="209.24408"
+         id="text3270">
+        <tspan
+           id="tspan3272"
+           sodipodi:role="line"
+           y="138.73997"
+           x="209.24408 215.38116 222.74353 228.88068 232.55634 235.3158 243.28528 248.80426 251.8728 255.54846 261.06744 264.13605 269.65503 275.17401 277.93353 284.67773 289.57861 295.09766 299.99847"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">SCSI Unifying Layer</tspan>
+      </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 184.71532,147.93844 70.52,0 0,24.52875 -70.52,0 0,-24.52875 z"
+         style="fill:none;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3276" />
+      <text
+         style="font-size:15px"
+         y="157.13664"
+         x="190.84741"
+         id="text3280">
+        <tspan
+           id="tspan3282"
+           sodipodi:role="line"
+           y="157.13664"
+           x="190.84741 197.93134 202.2876 205.55487 210.46057 217.54449 221.90082 225.16803"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Hardware</tspan>
+        <tspan
+           id="tspan3284"
+           sodipodi:role="line"
+           y="169.40103"
+           x="218.44226 225.52618 228.7934 231.521 236.42676 240.78302 244.05029"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Drivers</tspan>
+      </text>
+      <path
+         inkscape:connector-curvature="0"
+         d="m 258.30156,147.93844 70.52,0 0,24.52875 -70.52,0 0,-24.52875 z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3288" />
+      <text
+         style="font-size:15px"
+         y="169.40114"
+         x="261.36786"
+         id="text3292">
+        <tspan
+           id="tspan3294"
+           sodipodi:role="line"
+           y="169.40114"
+           x="261.36786 264.63513 267.36273 272.81787 279.36218 284.81738 288.08459 290.53748 292.99036 295.71796 300.62372 304.97998 310.51367 314.33038 318.68665 322.50336 325.23096"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">(iSCSI, ide−scsi)</tspan>
+        <tspan
+           id="tspan3296"
+           sodipodi:role="line"
+           y="157.13676"
+           x="264.43396 269.88916 273.70587 278.06213 282.9679 287.87366 292.77942 295.2323 302.31616 305.58344 308.31097 313.21674 317.57306 320.84027"
+           style="font-size:9.8114996px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Pseudo Drivers</tspan>
+      </text>
+      <path
+         id="path3306"
+         style="fill:#797979;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 258.30156,215.3922 73.58625,0 0,-18.39625 -73.58625,0 0,18.39625 z"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path3308"
+         style="fill:none;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         d="m 258.30156,196.99598 73.58625,0 0,18.39625 -73.58625,0 0,-18.39625 z"
+         inkscape:connector-curvature="0" />
+      <text
+         style="font-size:15px"
+         y="209.26053"
+         x="264.43402"
+         id="text3310">
+        <tspan
+           id="tspan3312"
+           sodipodi:role="line"
+           y="209.26053"
+           x="264.43402 272.40344 276.0791 283.44147 287.11713 295.08655 298.15509 303.67413 310.41833 313.48688 319.00592"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">NIC(GigEth)</tspan>
+      </text>
+      <path
+         id="path3322"
+         style="fill:none;stroke:#000000;stroke-width:1.22625005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:4.9057625;stroke-dashoffset:0"
+         d="m 442.26781,40.624665 -315.80879,0"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 181.64907,40.624665 150.23876,0 0,18.39625 -150.23876,0 0,-18.39625 z"
+         style="fill:none;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3326" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 258.30156,178.59968 73.58625,0 0,15.33001 -73.58625,0 0,-15.33001 z"
+         style="fill:#8e8f8e;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         id="path3328" />
+      <path
+         id="path3332"
+         style="fill:none;stroke:#000000;stroke-width:0.61374998;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
+         d="m 331.88783,175.53341 0.0412,0 0.0412,0.0412 0.0812,0.04 0.16376,0.0413 0.16369,0.0812 0.2863,0.0825 0.28625,0.0813 0.36751,0.1225 0.3675,0.0825 0.44999,0.0813 0.45001,0.0825 0.44999,0.04 0.49,0 0.49118,-0.04 0.49007,-0.12375 0.49126,-0.1625 0.49,-0.24628 0.48988,-0.32624 0.49137,-0.40878 0.44983,-0.5725 0.49011,-0.69497 0.45006,-0.81748 0.44983,-1.0225 0.4089,-1.14502 0.36751,-1.34872 0.32749,-1.47125 0.24486,-1.55381 0.2039,-1.51245 0.12375,-1.47248 0.0812,-1.39007 0,-1.30745 -0.0412,-1.18629 -0.0812,-1.06248 -0.16376,-1.02248 -0.12263,-0.89874 -0.20488,-0.85878 -0.16247,-0.81748 -0.205,-0.77629 -0.20375,-0.77751 -0.16376,-0.81749 -0.205,-0.85876 -0.1225,-0.89876 -0.16372,-1.02248 -0.0812,-1.06248 -0.0412,-1.18628 0,-1.30746 0.0825,-1.38999 0.12237,-1.47125 0.2039,-1.51376 0.24498,-1.55251 0.32753,-1.47255 0.36747,-1.34864 0.40878,-1.14509 0.45002,-1.0212 0.44998,-0.81879 0.49,-0.69495 0.45002,-0.5713 0.49122,-0.40878 0.48996,-0.32737 0.49129,-0.24506 0.49,-0.1638 0.49,-0.1225 0.4911,-0.0412 0.49011,0 0.45007,0.0412 0.9,0.16372 0.36751,0.0812 0.36746,0.1225 0.57251,0.16381 0.16377,0.0811 0.16365,0.0412 0.0814,0.0412 0.0412,0.04 0.0412,0 m -18.39749,-36.79245 0.0412,0 0.0413,-0.0413 0.0812,-0.0413 0.16377,-0.04 0.16368,-0.0825 0.2863,-0.0811 0.28625,-0.0826 0.36752,-0.1225 0.3675,-0.0812 0.44998,-0.0812 0.45002,-0.0825 0.44998,-0.0412 0.49,0 0.49118,0.0412 0.49007,0.1225 0.49127,0.1638 0.49,0.24499 0.48987,0.32745 0.49138,0.40878 0.44982,0.5725 0.49011,0.69497 0.45007,0.8175 0.44982,1.02256 0.4089,1.14372 0.36751,1.35002 0.32749,1.47126 0.24486,1.55372 0.2039,1.51253 0.12375,1.47125 0.0813,1.39 0,1.30875 -0.0412,1.185 -0.0813,1.06376 -0.16376,1.02119 -0.12262,0.90005 -0.20489,0.85869 -0.16246,0.81756 -0.40875,1.5525 -0.16377,0.8175 -0.205,0.85869 -0.1225,0.90003 -0.16372,1.02126 -0.0813,1.0637 -0.0412,1.18508 0,1.30874 0.0825,1.39 0.12237,1.47125 0.2039,1.51246 0.24498,1.55373 0.32754,1.47125 0.36746,1.35002 0.40879,1.14379 0.45001,1.0225 0.44999,0.81756 0.49,0.69489 0.45001,0.57251 0.49122,0.40877 0.48997,0.32747 0.49128,0.24505 0.49,0.16372 0.49,0.1225 0.4911,0.0412 0.49012,0 0.45006,-0.0412 0.44986,-0.0813 0.45014,-0.0825 0.36751,-0.0812 0.36746,-0.1225 0.57252,-0.1638 0.16376,-0.0825 0.16365,-0.04 0.0814,-0.0412 0.0412,-0.0412 0.0412,0"
+         inkscape:connector-curvature="0" />
+      <text
+         style="font-size:15px"
+         y="52.889141"
+         x="215.37628"
+         id="text3334">
+        <tspan
+           id="tspan3336"
+           sodipodi:role="line"
+           y="52.889141"
+           x="215.37628 219.05194 222.12048 230.0899 232.84943 238.98657 244.50555 248.79932 251.86786 256.76874 265.35632 268.11584 275.47815 280.37903 283.44763 286.51617"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">I/O System Calls</tspan>
+        <tspan
+           id="tspan3338"
+           sodipodi:role="line"
+           y="55.955498"
+           x="350.28491 358.25433 363.15521 366.83087 372.34985 377.25073 380.31934 383.0788 389.21594 394.73492 399.6358 404.53668"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Kernel Space</tspan>
+        <tspan
+           id="tspan3340"
+           sodipodi:role="line"
+           y="163.26913"
+           x="147.92194 154.66617 160.18515 168.1546 173.05545"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Lower</tspan>
+        <tspan
+           id="tspan3342"
+           sodipodi:role="line"
+           y="138.74049"
+           x="147.92194 157.73471 160.80328 166.3223 171.84128 174.90985"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Middle</tspan>
+        <tspan
+           id="tspan3344"
+           sodipodi:role="line"
+           y="114.21185"
+           x="147.92194 155.89139 161.41037 166.92938 171.83026"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">Upper</tspan>
+        <tspan
+           id="tspan3346"
+           sodipodi:role="line"
+           y="138.74049"
+           x="356.4176 362.55475 369.91711 376.0542 379.72986 382.48938 388.62653 394.14551 399.66449 403.95825 409.47729 413.77106 416.83966 421.74048"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">SCSI Subsystem</tspan>
+        <tspan
+           id="tspan3348"
+           sodipodi:role="line"
+           y="34.492546"
+           x="350.28491 358.25433 362.5481 367.44897 371.12463 373.88416 380.0213 385.54028 390.44116 395.34204"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">User Space</tspan>
+        <tspan
+           id="tspan3350"
+           sodipodi:role="line"
+           y="190.86382"
+           x="276.6983 283.4425 290.80487 296.94202 300.01056 303.68622"
+           style="font-size:11.03800011px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times-Roman">TCP/IP</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

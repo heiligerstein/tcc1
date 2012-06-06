@@ -1,0 +1,31 @@
+\select@language {brazilian}
+\contentsline {figure}{\numberline {1}{\ignorespaces Servidor NAS e SAN.}}{11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arquitetura padr\~ao NAS}}}{11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arquitetura padr\~ao SAN}}}{11}
+\contentsline {figure}{\numberline {2}{\ignorespaces Comparativo entre protocolos SAN existentes.}}{13}
+\contentsline {figure}{\numberline {3}{\ignorespaces RAID n\IeC {\'\i }veis 0 a 5. Os discos c\'opia de seguran\c ca e paridade est\~ao sombreados.}}{15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RAID n\IeC {\'\i }vel 0}}}{15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RAID n\IeC {\'\i }vel 1}}}{15}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {RAID n\IeC {\'\i }vel 2}}}{15}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {RAID n\IeC {\'\i }vel 3}}}{15}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {RAID n\IeC {\'\i }vel 4}}}{15}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {RAID n\IeC {\'\i }vel 5}}}{15}
+\contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura da Solu\c c\~ao.}}{22}
+\contentsline {figure}{\numberline {5}{\ignorespaces Cen\'ario de testes.}}{23}
+\contentsline {figure}{\numberline {6}{\ignorespaces Vaz\~ao dos disco alcan\c cada com diferentes par\^ametros de microbenchmark.}}{25}
+\contentsline {figure}{\numberline {7}{\ignorespaces Vaz\~ao de disco alcan\c cada por diferentes tipos de workloads em cen\'arios de execu\c c\~ao diversos. Onde indicado, o valor correto das barras foi modificado para melhor visualiza\c c\~ao dos resultados.}}{28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-throughput}}{28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-throughput}}{28}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-throughput}}{28}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-throughput}}{28}
+\contentsline {figure}{\numberline {8}{\ignorespaces Tempo de CPU por opera\c c\~ao de I/O em diferentes workloads.}}{29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-cpu}}{29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-cpu}}{29}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-cpu}}{29}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-cpu}}{29}
+\contentsline {figure}{\numberline {9}{\ignorespaces Quantidade de dados trafegado na rede (transmitido + recebido) por opera\c c\~ao.}}{30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-rede}}{30}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-rede}}{30}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-rede}}{30}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-rede}}{30}
+\contentsline {figure}{\numberline {10}{\ignorespaces Cronograma do Projeto.}}{34}

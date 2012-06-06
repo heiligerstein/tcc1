@@ -1,0 +1,1112 @@
+%% Exemplo de utilizacao do estilo de formatacao normas-utf-tex (http://normas-utf-tex.sourceforge.net)
+%% Autores: Hugo Vieira Neto (hvieir@utfpr.edu.br)
+%%          Diogo Rosa Kuiaski (diogo.kuiaski@gmail.com)
+%% Colaboradores:
+%%          CÃ©zar M. Vargas Benitez <cesarvargasb@gmail.com>
+%%          Marcos Talau <talau@users.sourceforge.net>
+
+\documentclass[openright]{normas-utf-tex} %openright = o capitulo comeca sempre em paginas impares
+%\documentclass[oneside]{normas-utf-tex} %oneside = para dissertacoes com numero de paginas menor que 100 (apenas frente da folha)
+
+% para uso de colchetes vá ao final do arquivo e comente a referência abaixo
+%\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abnt-alf}
+\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abntcite} %configuracao correta das referencias bibliograficas.
+%\usepackage[num,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abntcite} %configuracao correta das referencias bibliograficas.
+
+\usepackage{url}
+
+% hyphenization
+\usepackage[brazilian]{babel}
+%\usepackage[T1]{fontenc} 
+%\usepackage{ae} 
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+
+% para lista de siglas
+%\usepackage{glossary}
+
+%\usepackage{calc}
+%\usepackage[nomessages]{fp}
+\usepackage{subfigure} % para utilizar subfiguras
+%\renewcommand{\thesubfigure}{.\alph{subfigure}} 
+%\setcounter{subfigure}{1} % Reset subfigure counter
+% %\renewcommand{\thesubfigure}{(\alph{subfigure})}
+%\let\p@subfigure=\thefigure
+%\renewcommand{\p@subfigure}{1}
+
+%\FPeval{\result}{clip(\thefigure + 1)}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+	\makeatletter
+		\renewcommand{\p@subfigure}{}
+		\renewcommand{\@thesubfigure}{\thesubfigure\space}
+	\makeatother
+
+
+% alinhamento dos captions das figuras
+%\usepackage[justification=justified,singlelinecheck=false]{caption}
+
+%\usepackage[brazilian]{babel} % pacote portugues brasileiro
+%\usepackage[latin1]{inputenc} % pacote para acentuacao direta
+\usepackage{amsmath,amsfonts,amssymb} % pacote matematico
+\usepackage{graphicx} % pacote grafico
+\usepackage{times} % fonte times
+
+%Podem utilizar GEOMETRY{...} para realizar pequenos ajustes das margens. Onde, left=esquerda, right=direita, top=superior, bottom=inferior. P.ex.:
+%\usepackage{geometry}
+%\geometry{left=3.0cm,right=1.5cm,top=4cm,bottom=1cm} 
+
+% ---------- Preambulo ----------
+\instituicao{Faculdades Integradas do Brasil - Unibrasil} % nome da instituicao
+\programa{Curso de Bacharelado em Sistemas de Informação} % nome do programa
+\area{Sistemas de Informação} % [Engenharia Biom\'edica] ou [Inform\'atica Industrial] ou [Telem\'atica]
+
+%\documento{Disserta\c{c}\~ao} % [Disserta\c{c}\~ao] ou [Tese]
+\documento{Trabalho de Conclusão de Curso I} % [Disserta\c{c}\~ao] ou [Tese]
+\nivel{Graduação} % [Mestrado] ou [Doutorado]
+\titulacao{Graduado} % [Mestre] ou [Doutor]
+
+\titulo{\MakeUppercase{Compartilhamento de Arquivos em Storage de Alta Disponibilidade na Unibrasil}} % titulo do trabalho em portugues
+\title{\MakeUppercase{File Sharing with High-Available Storage in the Unibrasil University}} % titulo do trabalho em ingles
+
+\autor{Leonardo Antônio dos Santos} % autor do trabalho
+\cita{SANTOS, Leonardo} % sobrenome (maiusculas), nome do autor do trabalho
+
+\palavraschave{AoE, ATA, Ethernet, Storage} % palavras-chave do trabalho
+\keywords{AoE, ATA, Ethernet, Storage} % palavras-chave do trabalho em ingles
+
+%\comentario{\UTFPRdocumentodata\ apresentado ao \UTFPRprogramadata\ da \ABNTinstituicaodata\ como requisito parcial para obten\c{c}\~ao do grau de ``\UTFPRtitulacaodata\ em Ci\^encias'' -- \'Area de Concentra\c{c}\~ao: \UTFPRareadata.}
+\comentario{\UTFPRdocumentodata\ apresentado ao \UTFPRprogramadata\ da \ABNTinstituicaodata.}
+
+
+\orientador{Msc. Sabrina Victório} % nome do orientador do trabalho
+%\orientador[Orientadora:]{Nome da Orientadora} % <- no caso de orientadora, usar esta sintaxe
+\coorientador{Msc. Pedro Eugênio Rocha} % nome do co-orientador do trabalho, caso exista
+%\coorientador[Co-orientadora:]{Nome da Co-orientadora} % <- no caso de co-orientadora, usar esta sintaxe
+%\coorientador[Co-orientadores:]{Nome do Co-orientador} % no caso de 2 co-orientadores, usar esta sintaxe
+%\coorientadorb{Nome do Co-orientador 2}	% este comando inclui o nome do 2o co-orientador
+
+\local{Curitiba} % cidade
+\data{\the\year} % ano automatico
+
+
+%---------- Inicio do Documento ----------
+\begin{document}
+
+\capa % geracao automatica da capa
+\folhaderosto % geracao automatica da folha de rosto
+%\termodeaprovacao % <- ainda a ser implementado corretamente
+
+% dedicatÃƒÂƒÃ‚Â³ria (opcional)
+%\begin{dedicatoria}
+%Texto da dedicat\'oria.
+%\end{dedicatoria}
+
+% agradecimentos (opcional)
+%\begin{agradecimentos}
+%Texto dos agradecimentos.
+%\end{agradecimentos}
+
+% epigrafe (opcional)
+%\begin{epigrafe}
+%Texto da ep\'igrafe.
+%\end{epigrafe}
+
+%%resumo
+%\begin{resumo}
+%Texto do resumo (m\'aximo de 500 palavras).
+%\end{resumo}
+
+%%abstract
+%\begin{abstract}
+%Abstract text (maximum of 500 words).
+%\end{abstract}
+
+%% listas (opcionais, mas recomenda-se a partir de 5 elementos)
+\listadefiguras % geracao automatica da lista de figuras
+%\listadetabelas % geracao automatica da lista de tabelas
+\listadesiglas % geracao automatica da lista de siglas
+\listadeacronimos % geracao automatica da lista de acrônimos
+%\listadesimbolos % geracao automatica da lista de simbolos
+
+%% sumario
+\sumario % geracao automatica do sumario
+
+
+%---------- Inicio do Texto ----------
+% recomenda-se a escrita de cada capitulo em um arquivo texto separado (exemplo: intro.tex, fund.tex, exper.tex, concl.tex, etc.) e a posterior inclusao dos mesmos no mestre do documento utilizando o comando \input{}, da seguinte forma:
+%\input{intro.tex}
+%\input{fund.tex}
+%\input{exper.tex}
+%\input{concl.tex}
+
+
+%---------- Primeiro Capitulo ----------
+\chapter{Introdução}
+\label{introducao}
+
+Neste capítulo será apresentada uma visão geral sobre o estado da arte, que será melhor detalhado no Capítulo \ref{revisao-literatura}. Na Seção \ref{problema} será feita uma explanação dos problemas enfrentados pela Unibrasil no armazenamento e disponibilização de dados que motivaram a condução deste trabalho. A Seção \ref{objetivo_geral} e \ref{objetivos_especificos} trata dos objetivos gerais e específicos daquilo que se busca após a conclusão deste trabalho. A Seção \ref{justificativa} apresenta os principais motivos que justificam os resultados esperados diante dos problemas expostos na Seção \ref{problema}.
+
+De modo geral, as tecnologias têm se tornado cada vez mais essenciais ao dia a dia das empresas e das pessoas. Grandes corporações têm utilizado sistemas informatizados para gerenciar as suas linhas de produção, sistemas de controle de estoque e compartilhamento de arquivos. Especialmente sobre o compartilhamento de arquivos, os volumes de dados têm aumentado em proporção cada vez maior. Basta
+observar o crescimento de serviços de armazenamento de dados famosos como \textit{YouTube} \cite{youtube}, \textit{4shared} \cite{4shared} e \textit{Source Forge} \cite{sourceforge}. Além da necessidade de compartilhamento de grandes quantidades de dados, grande parte das empresas possuem informações que precisam ser armazenados de forma segura e com alta disponibilidade, ou seja, a informação necessita estar disponível quase todo tempo, senão todo o tempo.
+
+Assim, é fácil pensar em juntar vários \sigla{HDs}{{\textit{Hard Disk}} - Disco Rígido} (\textit{Hard Disk} - Disco Rígido) a fim de solucionar o problema do compartilhamento de arquivos. Mas esta solução, apesar de parecer fácil, na prática não funciona lançando mão para isto de métodos de compartilhamento de arquivos tradicionais, como \acronimo{CIFS}{\textit{Common Internet File System}}, \sigla{NFS}{\textit{Network File System}} ou \sigla{SMB}{\textit{Server Message Block}} --- protocolos para compartilhamento de arquivos para sistemas de arquivos (\textit{filesystems}) como \textit{Windows} ou \textit{Linux}. A justificativa para isto é porque estes métodos compartilham apenas os arquivos e não os dispositivos de armazenamento, tornando inviável o gerenciamento deste dispositivo de forma remota.
+
+Neste contexto, surgiram outros protocolos para compartilhamento de dispositivos de armazenamento de dados (ou \textit{block devices}), sendo os principais deles o \acronimo{iSCSI}{\textit{Internet Small Computer System Interface}} (\textit{Internet Small Computer System Interface}) \cite{iscsi_rfc} e o \sigla{FC}{\textit{Fibre Channel}} (\textit{Fibre Channel}) \cite{fibre_channel}. Ambos os protocolos cumprem os objetivos do armazenamento de dados de forma segura, com alta disponibilidade e para grandes quantidades de arquivos. Os principais problemas que envolvem estes protocolos são o alto custo de tecnologia e a dependência de hardware específico para implementação.
+
+O \sigla{AoE}{\textit{ATA Over Ethernet}} (\textit{ATA Over Ethernet}) é um protocolo \textit{open source} (código aberto) desenvolvido pela empresa \textit{Coraid} \cite{aoe_specification} e disponibilizado à comunidade de ciências da computação a fim de ser estudado e melhorado em sua implementação. Ele resolve os problemas mais comuns do \textit{Fibre Channel} e iSCSI que são, respectivamente, alto custo e sobrecarga de rede.
+
+%\begin{espacosimples}
+
+\section{Problema}
+\label{problema}
+
+Antigamente, quando um professor desejava compartilhar um arquivo, seja texto, áudio ou vídeo, gravava o seu conteúdo em uma mídia (discos removíveis, CD-ROMs, DVD-ROMs ou \textit{flash-drives}) e repassava uma cópia entre todos os alunos ou distribuía várias cópias entre eles. Com o passar do tempo, o acesso à intranet e internet assim como a computadores pessoais,  \textit{notebooks}, \textit{tablets} e \textit{smartphones} se tornou mais acessível a todos. Porém, as tecnologias que proviam o acesso aos dados não evoluíram na mesma proporção. Deste modo, as instituições de ensino se viram diante da falta de uma área de armazenamento de dados compartilhada entre todo o corpo docente e discente. Na UniBrasil esta realidade não é diferente.
+
+Outro grande problema é o alto custo nas tecnologias de armazenamento de dados para compartilhamento de arquivos alta disponibilidade. Não basta compartilhar dados, é necessário que estes dados estejam sempre disponíveis quando solicitados e livres de desastre casos de perda de algum dos discos. Para solucionar este problema, o custo de tecnologias como Fibre Channel e iSCSI nativo é alto em relação a tecnologias como AoE, pois exigem hardware específico para este fim \cite{aoe-perf}.
+
+Por fim, todos os dias uma grande quantidade de hardware sem uso é lançado ao meio ambiente, seja em grandes salas preparadas para recebê-los ou em locais não tão apropriados para este fim, como lixões. Implementações de protocolos e ferramentas em software surgiram a fim de conectar vários discos modernos a fim de aumentar a sua performance em conjunto. Recentemente surgiu um protocolo e as ferramentas de seu uso em código livre que torna possível a reutilização de hardwares comuns através da sua integração, dando a eles o comportamento de hardwares mais modernos e trazendo uma série de benefícios para a sociedade, principalmente através do cuidado com o meio ambiente.
+
+\section{Objetivo Geral}
+\label{objetivo_geral}
+
+%Implementar o uso de um protocolo e uma aplicação web que, integrados, permitam compartilhar arquivos com alta disponibilidade na intranet da UniBrasil e na internet.
+
+O objetivo geral deste trabalho é desenhar e juntar tecnologias da área de armazenamento de dados dentro de uma arquitetura que, com a utilização do protocolo de compartilhamento de discos em software livre AoE juntamente com outras ferramentas de software livre, disponibilize ao corpo docente e discente da UniBrasil uma área de armazenamento de dados com altos padrões de disponibilidade e desempenho para ser usada em conjunto com aplicações de compartilhamento de arquivos mais diversos, permitindo aos usuários compartilharem os seus arquivos.
+
+A estrutura criada pelo trabalho pode ser utilizada para compartilhar dados principalmente entre alunos do curso de Sistemas de Informação, porém, de acordo com que implementações de serviços e outros trabalhos desenvolvidos no curso forem utilizando os recursos oferecidos pelo trabalho em questão, informações poderão também ser compartilhadas entre alunos de toda a instituição. Com a homologação da arquitetura, esta poderá ser publicada em portais de software livre para que possa resolver problemas de armazenamento a qualquer que assim desejar.
+
+\section{Objetivos Específicos}
+\label{objetivos_especificos}
+
+- Estudar sobre protocolos de rede, alta disponibilidade de dados, analise de
+  performance e aplicações web;
+
+- Avaliar tecnologias paralelas que já encontram-se em uso no mercado;
+
+- Implementar o uso do protocolo adaptando-o a uma infraestrutura capaz de
+  compartilhar dados pela intranet e pela internet via web de forma distribuída;
+
+- Desenvolver sistema web que facilite o uso desta tecnologia ao usuário final.
+
+\section{Justificativa}
+\label{justificativa}
+
+O compartilhamento de arquivos, apesar de ser simples utilizando as ferramentas conhecidas, torna-se muito custoso quando se busca implementar grandes áreas de armazenamento de dados, principalmente se forem distribuídos e com alta
+disponibilidade. Isto acontece devido ao fato desta implementação ser possível somente com a compra de equipamentos especializados para este fim.
+
+O protocolo AoE aparece com a finalidade de resolver problemas de compartilhamento de arquivos, só que a um baixo custo de tecnologia, se comparado a protocolos para \textit{filesystems} (sistemas de arquivos) distribuídos.
+
+Uma implementação completa deste protocolo juntamente com uma ferramenta Web que facilitará e orquestrará o seu uso.
+
+%\chapter{Revisão de Literatura} \label{revisao_literatura}
+
+%[Ainda a completar...]
+
+%\chapter{Trabalhos Correlatos} \label{trabalhos_correlatos}
+
+\chapter{Revisão de Literatura}
+\label{revisao-literatura}
+
+Neste capítulo será apresentada em detalhes a principal tecnologia em que este trabalho se baseia, o protocolo AoE (\textit{ATA Over Ethernet}) assim como tecnologias similares e a comparação entre elas, justificando o não uso destas similares neste trabalho.
+
+\section{Compartilhamentos}
+
+% \textbf{SAN e NAS - Termos Ambíguos?}
+
+Através do que se tem na literatura, \acronimo{SAN}{\textit{Storage Area Network}} (\textit{Storage Area Network}) e \acronimo{NAS}{\textit{Network Attached Storage}} (\textit{Network Attached Storage}) são termos potencialmente fáceis de se confundir. NAS significa \textit{compartilhar arquivos} ao passo de que SAN significa \textit{compartilhar discos}. A principal diferença entre eles está em que o no NAS o cliente acessa arquivos e diretórios individuais compartilhados pelo servidor, no SAN o cliente tem acesso ao dispositivo físico real podendo realizar qualquer tipo de operação sobre ele \cite{fundamentals-netw-stor}.
+
+\subsection{Compartilhamento de Arquivos (NAS)}
+
+O compartilhamento de arquivos é uma das formas mais comuns de \textit{storages de rede} e comumente usado nos sistemas operacionais versões \textit{home} para Windows e Macintoch. Um computador em particular (servidor de arquivos) permite outros computadores acessarem alguns dos seus arquivos e/ou diretórios. 
+
+Para compartilhar seus arquivos, um protocolo de compartilhamento de arquivos é utilizado. Os protocolos mais conhecidos nesta categoria são NFS, CIFS (formalmente chamado de SMB, a base do compartilhamento Windows e implementado no Linux pelo protocolo SAMBA), FTP, HTTP entre outros. A Figura \ref{fig-nas} mostra uma típica conexão de clientes a um servidor de arquivos através de uma \acronimo{LAN}{\textit{Local Area Network}} (\textit{Local Area Network}, ou rede local) \cite{fundamentals-netw-stor}.
+
+Em uma utilização mais realista, como por exemplo um ambiente corporativo, um servidor de arquivos normalmente possui muitos discos configurados em \acronimo{RAID}{\textit{Redundant Array of Independent Disks}} (\textit{Redundant Array of Independent Disks} --- conjunto de discos redundantes), que será tratado na Seção \ref{raid}. O servidor é formatado em um sistema de arquivos (EXT[2-4], NTFS, entre outros) e mantém um conjunto de arquivos e diretórios compartilhados com os clientes.
+
+No cenário dos compartilhamentos de arquivos NAS, uma mesma máquina pode ser cliente e servidor, pois em ambientes pequenos é comum todas as máquinas compartilharem um ou mais de seus arquivos com todas as outras. Já em um ambiente corporativo, é comum clientes Windows acessarem via CIFS/SMB um servidor que conecta a vários dispositivos de armazenamento maiores via NFS. Além disso, é bastante utilizado o empilhamento de compartilhamentos de arquivos através da rede, de modo que às vezes um servidor chega a fazer até o armazenamento local através da rede.
+
+Por fim, o compartilhamento de arquivos pode ser um gargalo de desempenho, uma vez que um único servidor poderá gerenciar muitos tipos de operações sobre arquivos (leitura, escrita, criação, exclusão, incremento, etc.). Quando um cliente escreve um arquivo no servidor, na verdade o arquivo é escrito duas vezes, uma no cliente no seu \textit{virtual shared file space} (espaço de arquivos virtual compartilhado) e outra no servidor, no disco real \cite{aoe-mpls}.
+
+\begin{figure}[h]
+\centering
+\subfigure[Arquitetura padrão NAS]{
+ \includegraphics[width=5cm]{img/nas} 
+ \label{fig-nas}  
+}
+\qquad 
+\subfigure[Arquitetura padrão SAN]{
+ \includegraphics[width=5.5cm]{img/san} 
+ \label{fig-san}
+}
+\caption{Servidor NAS e SAN.}
+\label{fig-nas-san}
+\end{figure}
+
+\subsection{Compartilhamento de Discos (SAN)}
+
+%Disk sharing is simpler than file sharing, but less familiar to most people. It is not always “sharing” in quite the same sense as file sharing. Normally, a disk server shares a (real or virtual) disk volume with only one computer at a time. (That is, the computer mounts the volume and uses it – a term that goes back to the manual mounting of tapes on tape drives in the 1960s.)
+
+O compartilhamento de discos é mais simples que o de arquivos, porém é bem menos conhecido pela maioria das pessoas. Nem sempre o termo \textit{"compartilhar"} possui o sentido de compartilhamento arquivos. Normalmente um servidor de discos compartilha um volume de disco (disco real ou virtual, caso se utilize LVM \cite{lvm-howto} ou similar) com apenas um computador por vez. O computador monta o volume e o usa (o termo monta remete às montagens de fitas citadas nos manuais de fitas de 1960). Ao compartilhamento de discos por muitas máquinas pode acontecer quando o disco for formatado com um \textit{cluster filesystem} (VMWare VMFS \cite{vmfs}, OCFS \cite{ocfs}, etc.) entre outros. Este tipo de abordagem é utilizada para aplicações em que é necessário que múltiplos \textit{hosts} acessem o disco compartilhado, como é o caso da virtualização em \textit{cluster} \cite{fundamentals-netw-stor}.
+
+
+\section{Protocolos para Compartilhamento de Discos}
+
+\subsection{ATA Over Ethernet (AoE)}
+\label{subsec-aoe}
+
+De forma sumária, o AoE é um protocolo de padrão aberto que permite o acesso
+direto de \textit{hosts} (clientes de rede) a dispositivos de disco, realizando
+isto através de uma rede. Com ele é possível compartilhar discos simples ou
+\textit{arrays} de disco (conjuntos de discos) usufruindo de todas as vantagens
+de acesso \textit{raw device} (acesso direto ao dispositivo) e ser \textit{layer
+2} (camada  \textit{Ethernet}) \cite{aoe_specification}.
+
+O protocolo AoE foi construído para ser simples, de alta performance e baixo
+custo em tecnologia, se comparado às principais tecnologias existentes no
+mercado para o mesmo fim, como iSCSI e \textit{Fibre Channel}, quando o objetivo é
+compartilhar \textit{block device} (dispositivo de bloco), pois aposta na
+principal vantagem da simplicidade eliminando o \textit{overhead} TCP/IP.
+
+\sigla{ATA}{\textit{Advanced Technology Attachment}} (\textit{Advanced Technology Attachment}) é um conjunto padronizado de comandos para os dispositivos de armazenamento mais comuns. O AoE encapsula os comandos de um cliente ATA através do protocolo \textit{Ethernet} e repassa ao servidor e vice-versa. O cliente AoE apenas solicita ao servidor qual \textit{disk block} (bloco de disco), em qual disco e qual \textit{shelf} (gaveta - ou conjunto de discos) em que está a sua informação e este bloco é novamente encapsulado pelo enlace de dados no sentido servidor-cliente.
+
+Estas vantagens permitem ao AoE não simplesmente acessar os arquivos de um disco remoto, mas realizar operações de baixo nível em dispositivos de disco, como formatar sistemas de arquivos e recriar a tabela de partições. Por padrão o AoE é nativo nos \textit{kernels} (núcleo do sistema) acima da versão 2.6.11. 
+
+\subsection{iSCSI}
+
+O Internet SCSI, ou iSCSI, é um dos mais conhecidos protocolos para Storgaes SAN. Semelhante ao AoE, o iSCSI também encapsula comandos, mas, no seu caso são comandos SCSI. Isto também permite ao iSCSI a qualidade de storage SAN implementado sem o uso de componentes caros. Por exemplo, uma interface \textit{gigabit Ethernet} custa entre R\$ 70,00 e R\$ 250,00 \cite{art_perf_iscsi}.
+
+%SCSI is a popular family of protocols that enable systems to
+%communicate with I/O devices, especially storage devices.  SCSI
+%protocols are request/response application protocols with a common
+%standardized architecture model and basic command set, as well as
+%standardized command sets for different device classes (disks, tapes,
+%media-changers etc.).
+
+SCSI é uma popular família de protocolos que torna possível sistemas se
+comunicarem com dispositivos E/S (entrada e saída), especialmente dispositivos
+de armazenamento. Estes protocolos nada mais são do que protocolos de aplicação
+\textit{request/response} com um modelo de arquitetura comum padronizado e um
+conjunto de comandos, bem como um padronizado conjunto de comandos para
+diferentes classes de dispositivos (discos, fitas, pendrives etc.)
+\cite{iscsi_rfc}.
+
+Comparativamente, o tanto o ATA quanto o SCSI cumprem a mesma finalidade, ser
+um conjunto padrão de comandos para conectividade com dispositivos de
+armazenamento em geral. Tradicionalmente, o ATA era considerado mais barato e
+simples e o SCSI mais caro e robusto, mas esta comparação já não é mais
+verdadeira. Ambos agora possuem DMA (\textit{direct memory access} - acesso direto à
+memória), que elimina o problema de interrupções à CPU durante o processo de
+leitura ou escrita. Ambos também podem fazer enfileiramento de comandos fora de
+ordem para a CPU. E ambos possuem recurso de \textit{hotswap}, que permite o
+dispositivo ser removido e conectado sem problemas com o sistema em execução
+\cite{diff_scsi_ata}.
+
+Tanto ATA quanto SCSI foram criados para arquiteturas de transferência de dados
+originalmente paralela, mas atualmente já se utilizam estes padrões em
+arquiteturas serial com o SAS (Serial Attached SCSI) e SATA (Serial ATA). Quanto
+à velocidade, é difícil dizer qual padrão é mais rápido do que o outro, pois
+isto seria como comparar processadores diferentes para julgar o desempenho de um
+sistema. A velocidade não depende apenas do conector, mas da quantidade de giros
+do disco, o quão rápido a cabeça de leitura se move entre outros fatores \cite{diff_scsi_ata}.
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=.7\linewidth]{img/comparativo_camadas}
+	\caption{Comparativo entre protocolos SAN existentes.}
+	\label{fig-comparativo-protocolos}
+\end{figure}
+
+\section{Desempenho e Alta Disponibilidade}
+\label{alta-disponibilidade}
+
+\subsection{RAID}
+\label{raid}
+
+Nos últimos anos, o desempenho das CPUs tem crescido de forma exponencial, chegando a duplicar a cada 18 meses, o que não acontece com os dispositivos de disco. De 1970 aos dias atuais, o tempo médio de movimentação da cabeça de leitura (\textit{seek time}) dos discos melhorou de 50 a 100 ms para menos de 10 ms. Para outros ramos da tecnologia este avanço poderia ser bom, mas para a computação é um ganho muito pequeno. Assim, a disparidade entre CPUs e dispositivos de disco tem ficado cada vez mais acentuada \cite{sistemas-operacionais-tanenbaum}. 
+
+Pelo fato do processamento paralelo tornar as CPUs mais rápidas, este fato levou muitos a acreditarem que o mesmo poderia ser feito para dispositivos de E/S a fim de agilizar o acesso a disco e diminuir a disparidade de desempenho entre os dispositivos de entrada e saída e os processadores assim como de confiabilidade. Neste sentido Patterson \textit{et. al} sugeriram seis organizações para os discos e as definiu como RAID (\textit{redundant array of inexpensive disks} - arranjo redundante de discos baratos), que a indústria adotou rapidamente e substituiu o \textit{'I'} por 'Independentes', por questões mercadológicas \cite{raid-patterson, sistemas-operacionais-tanenbaum}.
+
+A ideia básica em que o RAID se baseia é juntar vários discos em uma única caixa e se apresentar ao sistema como um único disco, substituindo a placa controladora por uma placa RAID, visto que discos ATA e SCSI têm um bom desempenho, confiabilidade e baixo custo, podendo ainda permitir vários dispositivos em uma única controladora (15 para dispositivos mais robustos) \cite{storage-interfaces}.
+
+O \textit{RAID nível 0} é mostrado na Figura \ref{fig-raid0}. Ele descreve um modelo de RAID baseado em \textit{stripping}, que consiste na divisão dos dados em faixas, cada uma contendo $k$ setores. A faixa $0$ consiste nos setores de $0$ a $k-1$, a faixa 1 consiste nos setores de $k$ a $2k-1$ e assim por diante. O processo de gravação é realizado através de uma alternância consecutiva entre as faixas, mais conhecido como \textit{round-robin}. No exemplo da Figura \ref{fig-raid0}, quando uma operação de leitura é recebida, o controlador RAID quebra esta operação em outras quatro que são enviadas para as controladoras de disco e processadas em paralelo, aumentando o desempenho proporcionalmente ao número de discos que processam as requisições paralelas. Deste modo, o RAID0 trabalha melhor em casos de requisições maiores. Uma desvantagem do RAID0 acontece no caso da perda de dados, pois, como os dados estão divididos em várias faixas, a perda de um disco causa a perda total dos dados \cite{sistemas-operacionais-tanenbaum}.
+
+\begin{figure}[ht]
+\centering
+\subfigure[RAID nível 0]{
+ \includegraphics[width=6cm]{img/raid0} 
+ \label{fig-raid0}
+}
+\quad
+\subfigure[RAID nível 1]{
+ \includegraphics[width=12cm]{img/raid1} 
+ \label{fig-raid1}
+}
+\quad
+\subfigure[RAID nível 2]{
+ \includegraphics[width=10.5cm]{img/raid2} 
+ \label{fig-raid2}
+}
+\quad
+\subfigure[RAID nível 3]{
+ \includegraphics[width=7.5cm]{img/raid3} 
+ \label{fig-raid3}
+}
+\quad
+\subfigure[RAID nível 4]{
+ \includegraphics[width=7.5cm]{img/raid4} 
+ \label{fig-raid4}
+}
+\quad
+\subfigure[RAID nível 5]{
+ \includegraphics[width=7.5cm]{img/raid5} 
+ \label{fig-raid5}
+}
+\caption{RAID níveis 0 a 5. Os discos cópia de segurança e paridade estão sombreados.}
+\fonte{\cite{sistemas-operacionais-tanenbaum}}
+\label{fig-raid}
+\end{figure}
+
+Outro tipo de RAID é o \textit{RAID nível 1}, mostrado na Figura \ref{fig-raid1}. Neste tipo de RAID os todos os dados são duplicados em outros discos de forma que existam quatro discos primários e quatro discos de cópia de segurança (\textit{backup}). Durante o processo de escrita, cada faixa é escrita duas vezes; durante o processo de leitura, os dados podem ser lidos de qualquer uma das faixas. Em consequência disto, o desempenho da escrita é pior do que o uso de um único disco, porém, o desempenho da leitura pode ser até duas vezes melhor, visto que pode se obter o dado de até dois discos em paralelo. A tolerância a falhas é a grande vantagem desta abordagem, considerando que a perda de um dos discos não ocasiona a perda dos dados, pois o disco de cópia passa a atuar no lugar do disco danificado. A restauração dos dados é feita apenas com a instalação de um novo disco, copiando para ele os dados da cópia de segurança.
+
+Os \textit{níveis 2 e 3 de RAID} não serão utilizados no desenvolvimento deste, mas merecem uma breve e
+
+\chapter{Trabalhos Correlatos}
+
+\chapter{Metodologia da Pesquisa}
+\label{metodologia_pesquisa}
+
+\section{Parte I - Natureza da pesquisa}
+\label{natureza_pesquisa}
+
+Redes de Computadores e Sistemas Distribuídos (Protocolos de Comunicação,
+Arquitetura de \textit{Clusters} e Servidores, Sistemas Distribuídos, Alta
+Disponibilidade).
+
+\section{Parte II - Tipo de pesquisa}
+\label{tipo_pesquisa}
+
+Aplicada e Bibliográfica.
+
+\section{Parte III - Levantamento de requisitos}
+\label{levantamento_requisitos}
+
+Levantamento das necessidades de compartilhamento de arquivos utilizando-se de
+mecanismos como entrevistas e análise dos sistemas existentes.
+
+\section{Descrição e Justificativa das Tecnologias Aplicadas}
+\label{descricao_justificativa_tecn}
+
+As principais tecnologias utilizadas, desde ferramentas, linguagens de programação e protocolos serão melhores descritas nas próximas Subseções.
+
+\subsection{AoE Tools / vBlade} 
+
+O protocolo AoE (Ata over Ethernet) é utilizado na comunicação entre os dispositivos de armazenamento de dados, ou discos rígidos. Como este é um dos núcleos principal deste trabalho, foi melhor explanado na Seção \ref{subsec-aoe}. O AoE Tools é um conjunto de ferramentas gerenciamento do protocolo AoE, possibilitando executar comandos e manipular discos na \textit{máquina initiator}. Para a \textit{máquina target} é necessário a utilização do conjunto de ferramentas \textit{vBlade} (\textit{Virtual EtherDrive ® blade AoE target}) \cite{aoe-tools}. 
+
+Todas as particularidades citadas acima e visto a discussão encontrada na Seção \ref{sec-analise-desempenho} tornam indispensáveis o uso destes dois conjuntos de ferramentas na implementação deste trabalho. 
+
+\subsection{PHP}
+
+O PHP (\textit{Hypertext Preprocessor}) \cite{php} é uma das linguagens de programação mais utilizadas do mundo, especialmente para o desenvolvimento web. Um dos principais objetivos do PHP é possibilitar a implantação de soluções web rápidas, simples e eficientes, o que já tem conseguido há anos. Dentre as suas principais características técnicas estão: ser estruturado e orientado a objetos, possuir portabilidade (independência de plataforma), ter tipagem dinâmica (não precisa declarar tipo), possuir sintaxe similar ao C/C++ e Perl, e, principalmente, ser open-source.
+
+Para o trabalho apresentado, o PHP é importante por conta do seu requisito dentro do \textit{framework} de desenvolvimento utilizado, o CakePHP \cite{cakephp} (descrito na Subseção \ref{subsec-cake}), além das características já citadas acima.
+
+%\textbf{FERRAMENTAS:}
+
+
+\subsection{CakePHP} 
+\label{subsec-cake}
+
+% \textit{Framework} que agiliza o desenvolvimento de sites através da linguagem PHP.
+
+O CakePHP Development Framework é um \textit{framework} de desenvolvimento ágil para PHP que fornece uma arquitetura extensível para desenvolvimento, manutenção e implantação de aplicativos. Usando padrões de projeto conhecido como MVC (\textit{Model-view-controller} - Modelo-Visão-Controlador) \cite{mvc} e ORM (\textit{Object-relational mapping} - Mapeamento objeto-relacional) \cite{orm} no âmbito da convenção sobre o paradigma de configuração, o CakePHP reduz custos de desenvolvimento e ajuda os desenvolvedores a escreverem menos código \cite{cakephp}.
+
+Dentre os motivos que levaram à escolha do CakePHP para o desenvolvimento deste trabalho, podemos dizer que o CakePHP agiliza o desenvolvimento com alto padrão de qualidade de software e, visto que a abordagem deste trabalho não é tipica de desenvolvimento, agilizando a implementação, ajuda a que pontos mais importantes do trabalho a não serem onerados. Um outro motivo é que o CakePHP tem total compatibilidade de ORM com os principais bancos de dados do mercado, como o MySQL, que será melhor detalhando na Subseção \ref{subsec-mysql}.
+
+\subsection{MySQL} 
+\label{subsec-mysql}
+
+O MySQL é um SGBD (Sistema de Gerenciamento de Banco de Dados), que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês \textit{Structured Query Language}) como interface. É atualmente um dos bancos de dados mais populares, com mais de 10 milhões de instalações pelo mundo \cite{mysql-1}.
+
+Em grande parte, o sucesso do MySQL deve-se à integração fácil com o PHP e estar incluído nos pacotes de hospedagem de sites da Internet oferecidos atualmente quase que de forma obrigatória. Grandes empresas como  Yahoo! Finance, Motorola, NASA e Silicon Graphics utilizam o MySQL em suas aplicações de missão crítica \cite{mysql-2}.
+
+Além dos motivos já citados acima, o MySQL é de livre utilização, fácil uso e com vasta documentação publicada na Internet, o que torna relevante a sua utilização na implementação deste trabalho.
+
+%\subsection{OpenLDAP}
+%Implementação \textit{open source} do servidor de diretórios LDAP.
+
+\subsection{Linux Debian} 
+
+O Linux Debian, ou simplesmente Debian, é o sistema operacional que será utilizado tanto nas \textit{máquinas initiator} quando nas \textit{máquinas target} uma vez que o Debian é uma distribuição não comercial livre (gratuita e de código fonte aberto) do GNU/Linux (amplamente utilizada). O Debian tornou-se bastante conhecido por causa do seu sistema de gestão de pacotes, chamado APT, que permite: atualizações relativamente fáceis a partir de versões realmente antigas; instalações quase sem esforço de novos pacotes; remoções limpas dos pacotes antigos e atualizações mais seguras dos pacotes nas máquinas, visto que os pacotes são baixados do repositório oficial \cite{rotulo}.
+
+Atualmente uma versão estável do Debian versão 6.0, codinome \textit{"Squeeze"}, a qual será a versão utilizada neste trabalho. O Debian Stable procura sempre manter os pacotes mais estáveis, ou seja, alguns pacotes são mais antigos, porém isto garante a estabilidade do sistema, item este que é o grande foco para aplicação em servidores. Por conta da estabilidade e facilidade de uso do Debian, muitas distribuições comerciais se baseiam no Debian, incluindo: Linspire (antigo Lindows), Xandros, Knoppix, Kurumin, BrDesktop e Ubuntu. Esforços têm sido feitos para portar o Debian para outros núcleos livres além do Linux, incluindo o Hurd e o BSD. Por enquanto, ainda é mais preciso citar o Debian como uma "Distribuição Linux", sem outras qualificações \cite{rotulo}.
+
+\subsection{Apache HTTP Server} 
+
+Criado em 1995 por Rob McCool, então funcionário do NCSA (National Center for Supercomputing Applications), o servidor Apache (Servidor HTTP Apache - \textit{Apache HTTP Server}) é reconhecido pela comunidade da computação como o mais bem sucedido servidor Web código livre. Em pesquisa realizada em dezembro de 2007, foi constatado que a utilização do Apache é de $47,20$\% dos servidores no mundo \cite{apache-1}. Em maio de 2010, o Apache serviu mais de $54,68$\% de todos os sites e mais de $66$\% dos milhões de sites mais movimentados. É a principal tecnologia da \textit{Apache Software Foundation}, responsável por mais de uma dezena de projetos envolvendo tecnologias de transmissão via Web, processamento de dados e execução de aplicativos distribuídos \cite{apache-2}.
+
+Além disso, o Apache é compatível com o protocolo HTTP versão 1.1 e funcionalidades são mantidas através de uma estrutura de módulos, permitindo inclusive que o usuário escreva seus próprios módulos — utilizando a API do software. É disponibilizado em versões para a grande maioria dos sistemas operacionais como: Windows, Novell Netware, OS/2 e diversos outros do padrão POSIX (Unix, Linux, FreeBSD, etc.) \cite{apache-foundation}.
+
+Quanto ao Apache ser gratuiro, de acordo com a Apache Software Foudation, o aplicativo Apache existe para fornecer implementações de referência robustos e de nível comercial de muitos tipos de software. Deve continuar a ser uma plataforma na qual os indivíduos, assim as instituições podem construir sistemas confiáveis, tanto para fins experimentais quanto de missão crítica. O grupo arcedita que as ferramentas de publicação \textit{on-line} devem estar nas mãos de todas as pessoas, e que as empresas de software devem utilizar o seu dinheiro para fornecer serviços de valor agregado, tais como módulos especializados e de apoio, entre outras. As empresas em geral veem tudo isto como uma vantagem econômica de modo que a empresa que possuir" um mercado - na indústria de software - significa controlar firmemente o canal de tal forma que todos devem pagar por seu uso. Isso geralmente é feito por "possuir" os meios pelos quais as empresas realizam negócios, beneficiando-se à custa de todas essas outras empresas. Na medida em que os protocolos da \textit{World Wide Web} permanecer "sem dono" por uma única empresa, a Web continuará a possuir concorrências equitativas para as empresas grandes e pequenas. Assim, a Apache Foundation acredita que a "propriedade" dos protocolos deve ser evitada. Para este fim, a existência de implementações de referência robustas de vários protocolos e interfaces de programação de aplicativo devem estar disponíveis gratuitamente para todas as empresas e indivíduos \cite{apache-foundation}.
+
+Além disso, a Apache Software Foundation que constrói uma cultura em que aqueles que se beneficiam deste software usando-o, muitas vezes contribuem de volta a ele, fornecendo aprimoramentos de recursos, correções de bugs, e suporte para os outros nas listas públicas e \textit{newsgroups}. O esforço exercido por qualquer indivíduo em particular é relativamente pequeno, mas o produto resultante disto possui um resultado muito forte. Esses tipos de comunidades só pode acontecer com software livre --- quando alguém paga por um software, as empresas geralmente não estão dispostas a corrigir os seus erros de forma gratuita. Assim, pode-se dizer então que a força do Apache vem do fato de que ele é livre e, se fosse feito "não livre", sofreria bastante para crescer, mesmo que os recursos fosse gasto em uma equipe de desenvolvimento real \cite{apache-foundation}. Considerando as características descritas e visto que o Apache é construído para aplicações robustas baseadas em software livre, tudo isto torna o Apache HTTP Server uma ferramenta importante e justa para uso na implementação do projeto.
+
+%\section{Análise dos Riscos do Projeto}
+%\label{analise_riscos_proj}
+
+\section{Arquitetura da Solução} % Arquitetura/Modelagem/Topologia/
+\label{arquitetura_projeto}
+
+A arquitetura para a solução apresentada é apresentada na Figura \ref{fig-arquitetura}. Toda a arquitetura é composta de algumas partes importantes, o \textit{array de discos}, \textit{as máquinas targets}, \textit{o switch intermediário entre a máquina initiator e target}, tudo isto formando uma única rede SAN; e, recebendo os recursos, uma \textit{máquina initiator} contendo um servidor web que funcionará como um \textit{gateway} (aplicativo de interfaceamento) para requisições de dados e compartilhamento à rede SAN.
+
+Cada \textit{array de discos} é formado por um aglomerado de discos baratos que são conectados logicamente através de RAID5, o que aumenta a performance e garante a integridade dos dados caso se perca um dos discos. Sobre este conjunto de discos, a \textit{máquina target} utiliza o LVM (\textit{Logical Volume Manager}), que facilita o gerenciamento dos discos que são apresentados à \textit{máquina initiator} através do protocolo AoE. Incremento e decremento de espaço e acréscimo de outros arrays de disco no mesmo volume lógico são exemplos dos benefícios que se podem extrair do LVM
+
+Todas as máquinas são ligadas ao \textit{switch layer 2} através de cabos par trançados com conectores RJ-45  em suas pontas formando uma única rede SAN (tráfego exclusivo de dados). Neste ponto todos os \textit{arrays de discos} exportados pelas \textit{máquinas target} são enxergados pela \textit{máquina initiator} como apenas um único disco, ficando para as \textit{máquinas target} a tarefa de gerenciar os discos individuais. A \textit{máquina initiator}, ao receber cada dispositivo de bloco dos \textit{targets}, monta todos dentro de mais um nível de volume lógico (LVM), dando mais flexibilidade de manutenção para toda a arquitetura organizacional dos discos. Isto é importante para facilitar o gerenciamento de toda a solução de \textit{storage}.
+
+O \textit{gateway} feito pelo servidor Web faz o interfaceamento entre a camada de armazenamento e a apresentação para o usuário. Além disso, é responsável por toda a lógica de acesso aos dados e políticas de permissões de acesso aos usuários finais. A aplicação Web que provê o acesso aos usuários funciona de modo semelhante a serviços como \textit{4Shared} \cite{4shared} e \textit{Sourceforge} \cite{sourceforge}.
+
+Por fim, as camadas acima do servidor Web mostradas na Figura \ref{fig-arquitetura} representam a atual rede da UniBrasil, o que significa que todos os usuários que utilizam a rede e possuam permissões de acesso aos arquivos no \textit{gateway} poderiam fazer uso da ferramenta para compartilhar seus dados. Caso houvesse um redirecionamento no \textit{firewall} (ou \textit{gateway}) da faculdade, os mesmos usuários poderiam ter acesso a esta infraestrutura através da Internet.
+
+\begin{figure}[t]
+    \includegraphics[scale=0.45]{img/arquitetura-solucao}
+	\centering
+    \caption{Arquitetura da Solução.}
+    \label{fig-arquitetura}
+\end{figure} 
+
+\section{Análise de Desempenho entre os Protocolos}
+\label{sec-analise-desempenho}
+
+Todas as análises realizadas são baseadas no artigo submetido ao SEMISH (Seminário Integrado de Software e Hardware), evendo da SBC (Sociedade Brasileira de Computação) feito pelo Msc. Pedro Eugênio Rocha e pelo autor deste TCC Leonardo Antônio dos Santos; o qual fundamentou o porquê de se utilizar o protocolo AoE em relação ao iSCSI neste trabalho.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{./img/cenario-testes}
+\caption{Cenário de testes.}
+\label{fig:cenario-testes}
+\end{figure}
+
+\subsection{Outros Trabalhos de Testes}
+\label{relacionados}
+
+A popularização da virtualização e sua aplicação na consolidação de ambientes
+para {\it Cloud Computing} aumentou a demanda por protocolos eficientes de
+armazenamento de dados em rede. Apesar de existirem diferentes alternativas,
+como FC, iSCSI e AoE, o protocolo a ser utilizado depende fortemente de
+requisitos como desempenho, confiabilidade, latência e, principalmente, custo. 
+
+Grande parte das avaliações de desempenho de protocolos de armazenamento em
+SANs presentes na literatura restringem-se à análise individual de um protocolo
+\cite{fc-perf, art_perf_iscsi, aoe-perf}. Embora existam comparações de desempenho
+entre diferentes protocolos, muitos dos trabalhos comparam \textit{Fibre Channel}, por
+ser amplamente utilizado em sistemas organizacionais de grande porte, com
+protocolos alternativos \cite{fc-comp,fc-comp2}. Contudo, o protocolo \textit{Fibre
+Channel} exige a utilização de  especializado e de alto custo, fugindo
+do escopo deste trabalho.
+
+% TODO - mais um paragrafo aqui...
+Uma análise preliminar do desempenho dos protocolos AoE e iSCSI é mostrada em
+\cite{aoe-iscsi}. Neste artigo, microbenchmarks de escrita são executados sobre
+ambos os protocolos, variando o MTU dos quadros Ethernet. Além disso, a
+utilização de processamento dos protocolos é comparada.  Em
+\cite{cost-effective}, é apresentada mais uma comparação entre os protocolos
+iSCSI e AoE, considerados {\it eficientes em termos de custo} por não
+empregarem hardware especializado. Gerdelan {\it et al.} também analisam o
+desempenho dos protocolos somente através da comparação dos resultados de
+diferentes microbenchmarks em ambas as arquiteturas. 
+
+Argumentamos que, apesar de fornecer uma ideia preliminar do desempenho,
+microbenchmarks não refletem o comportamento dos protocolos em cenários reais
+de uso.  Uma medição mais precisa deve considerar os diferentes tipos de
+workloads que podem existir em sistemas reais e de grande porte, que podem ser
+simulados com a utilização de macrobenchmarks.
+
+%Um melhor desempenho em microbenchmarks não implica em melhor desempenho em
+%situações reais, onde além do workload diversos outros parâmetros, como
+%buffers, caches e tipo sistema de arquivos possuem grande influencia.  Assim,
+%a principal diferença consiste na metodologia de testes adotada.
+
+
+%---------------------------------------------------------------------------
+
+\subsection{Ambiente de Testes e Metodologia}
+\label{metodologia}
+
+Com o objetivo de testar o desempenho dos protocolos de armazenamento de rede,
+montamos um ambiente contendo dois servidores. O primeiro servidor, chamado de
+{\it target}, contém dois processadores Xeon X5690 {\it six-core} 3.47 GHz, 64
+GB de memória RAM e discos 10.000 rpm SCSI com capacidade de 300 GB. Um disco é
+utilizado exclusivamente para os testes com os protocolos. A segunda máquina,
+ou {\it initiator}, contém dois processadores Xeon {\it dual-core} 3 GHz, 8 GB
+de memória RAM e discos SCSI de 146 GB. As duas máquinas possuem mais de uma
+interface de rede, sendo diretamente interligadas através de interfaces
+Ethernet 1 Gigabit dedicadas para os testes. Finalmente, ambas utilizam o sistema
+operacional Debian 6.0.
+
+Primeiramente, executamos um conjunto de microbenchmarks sobre o ambiente de
+testes criado. Os microbenchmarks têm o objetivo de estabelecer uma linha de
+base sobre o desempenho esperado dos protocolos em situações muito específicas
+de uso. Os resultados obtidos através dos microbenchmarks, embora não reflitam
+situações próximas das reais de uso, são úteis na interpretação de resultados
+mais complexos, como os obtidos na execução de workloads reais.
+
+Em seguida, executamos um conjunto de macrobenchmarks sobre o mesmo ambiente de
+testes. Os macrobenchmarks têm o objetivo de medir o desempenho de diferentes
+configurações do sistema em workloads muito próximos dos encontrados em
+ambientes reais. Tais workloads, embora sintéticos, simulam os workloads
+encontrados em sistemas como servidores Web, servidores de arquivos, servidores
+de e-mail e bancos de dados transacionais, por exemplo. Além disso, alguns
+parâmetros como quantidade de memória disponível e MTU da interface de rede são
+alterados, visando verificar sua
+influência na vazão de disco alcançada por cada protocolo. Com base nestes
+resultados, analisaremos a eficiência dos protocolos em cada
+situação, bem como o impacto que a escolha do protocolo pode apresentar sobre o
+desempenho geral do sistema. 
+
+Após apresentar os resultados obtidos pelos macrobenchmarks, uma análise em
+termos de vazão, utilização de CPU e de rede é mostrada, relacionando-os com os
+obtidos pelos microbenchmarks. Por fim, uma discussão sobre os resultados
+encontrados é apresentada, enumerando algumas importantes observações sobre o
+desempenho dos protocolos, que, até onde sabemos, inexiste em trabalhos
+anteriores.
+
+
+\subsection{Microbenchmarks}
+\label{microbenchmarks}
+
+Nesta Seção, apresentamos os resultados obtidos através da execução de
+microbenchmarks utilizando os protocolos AoE e iSCSI. Os resultados estão
+divididos entre operações de leitura e escrita, padrão de acesso sequencial e
+aleatório, utilização ou não de caches e MTU da interface de rede (1500 e 9000
+bytes). 
+% XXX - So uma visao geral no primeiro paragrafo...
+%Estes dados resultam num  total de $32 (2^{5})$ testes que estão divididos
+%entre as Figuras \ref{} e \ref{} por possuírem padrões semelhantes de
+%performance, assim, não comprometendo apresentação no histograma e facilitando
+%a compreensão. 
+Todos os microbenchmarks foram executados através da ferramenta {\it fio}, que
+possibilita a emissão de diversos padrões de acesso de I/O e diferentes
+parâmetros de forma customizada e flexível.
+
+% aqui dá para destrinchar um pouco melhor
+Os resultados dos experimentos são ilustrados na Figura
+\ref{fig-microbenchmark}.  A Figura \ref{fig-micro-seq} mostra os resultados
+dos testes de leitura e escrita sequencial enquanto a Figura \ref{fig-micro-rand}
+mostra os resultados obtidos em leitura e escrita aleatória, sob diferentes
+configurações. Os resultados apresentados no microbenchmark correspondem à vazão
+média alcançada em três execuções. 
+%Os resultados apresentados no microbenchmark correspondem à vazão média e
+%agregada alcançada em três execuções. 
+
+%com uma quantidade de dados de no mínimo
+%$120\%$ e no máximo $200\%$ do valor da memória RAM, a fim  de evitar o
+%comprometimento dos resultados pelo uso demasiado de cache. 
+%Foi rejeitado e refeito qualquer resultado que apresentasse mais de $10\%$ de diferença em
+%relação ao conjunto de resultados, de modo que os resultados não apresentassem
+%uma dispersão considerável em relação ao outro.
+
+
+%\vspace{-5px}
+\begin{figure}[h] 
+\center 
+\subfigure[][Acesso Sequencial] {
+	\includegraphics[scale=0.6]{img/micro-throughput-seq}
+	\label{fig-micro-seq} 
+}
+\subfigure[][Acesso Aleatório] {
+	\includegraphics[scale=0.6]{img/micro-throughput-rand}
+	\label{fig-micro-rand} 
+}
+\subfigure { 
+	\includegraphics[scale=0.6]{img/legenda-micro}
+} 
+\caption{Vazão dos disco alcançada com diferentes parâmetros de 
+microbenchmark.} 
+\label{fig-microbenchmark}
+\end{figure}
+
+%\vspace{-10px}
+% consertado
+
+De acordo com os gráficos, é possível observar que o protocolo AoE apresenta
+melhor desempenho no teste de leitura sequencial sem cache, cerca de 20\%,
+independentemente do MTU. A perda de desempenho do protocolo iSCSI é atribuído
+ao {\it overhead} causado pelo processamento das camadas de rede adicionais,
+quando comparado ao AoE, que opera diretamente na camada de enlace. Todavia,
+quando o padrão de acesso é leitura aleatória, ainda sem cache, ambos
+apresentam o mesmo resultado. Neste caso, o {\it overhead} causado pelo acesso
+aleatório ao disco ({\it seek time}) na máquina {\it target} é predominante,
+suavizando o {\it overhead} causado pelas camadas de rede.
+
+Por outro lado, quando os testes de leitura são executados com cache, ambos os
+protocolos apresentam grande melhora de desempenho quando executados de forma
+sequencial, devido ao mecanismo de {\it read-ahead} do sistema operacional.
+Pelo mesmo motivo, como testes com padrão aleatório não se beneficiam com {\it
+read-ahead}, nenhuma alteração no desempenho é obtida pela adição de caches
+nestes padrões de acesso.
+
+%ok
+
+O mesmo comportamento observado na leitura sequencial e sem caches ocorre nas
+escritas --- o protocolo AoE apresenta melhor desempenho devido ao {\it
+overhead} das camadas de rede. Contudo, diferentemente das leituras, o
+protocolo AoE apresenta melhor desempenho mesmo em padrões de acesso
+aleatórios.  Como escritas são, em geral, assíncronas, de forma que os dados
+são escritos apenas em memória na máquina {\it target} e posteriormente
+escritos em disco, o tempo de acesso aleatório ao disco é mitigado, tornando
+novamente significativo o {\it overhead} das camadas de rede do iSCSI,
+diminuindo assim seu desempenho em relação ao protocolo AoE.
+
+% pode modificar... não completo ainda... mas dá p/ espremer
+%Na escrita sequencial, o AoE apresenta um resultado médio e agregado semelhante
+%ao iSCSI tanto com cache quanto sem cache e o resultado agregado também é
+%semelhante, pois na escrita sequencial (... EXPLICAÇÃO AQUI ...). Na escrita
+%aleatória, o AoE apresenta algumas diferenças em relação ao iSCSI; na presença
+%de cache, o AoE se mostra melhor no conjunto (pelo resultado agregado), sendo,
+%em todos os testes, este o único caso em que o resultado agregado é diferente
+%do resultado médio, pois o resultado médio considera a média do começo ao fim
+%do teste, já o agregado considera a média dos resultados em que a vazão passa a
+%maior parte do tempo do teste. Neste caso, com o MTU maior, o AoE apresenta um
+%resultado médio de $14\%$ e agregado de $167\%$ superior ao iSCSI.
+
+Quando as escritas são executadas com cache, por outro lado, o protocolo iSCSI
+apresenta desempenho superior em todos os experimentos. Isso ocorre pois o
+subsistema SCSI da máquina {\it initiator} implementa a política de cache
+conhecida como {\it write-back}, onde os dados são escritos no cache da máquina
+local e enviados à maquina remota em momento oportuno. Assim, o alto {\it
+desempenho percebido} pelo protocolo iSCSI em testes de escrita com cache é
+maior que o {\it desempenho real}, na medida em que as operações de escritas
+não atingem imediatamente o disco da máquina destino.
+
+
+\subsection{Macrobenchmarks}
+\label{macrobenchmarks}
+
+Para analisar o comportamento de ambos os protocolos de armazenamento de redes
+SAN em situações próximas das encontradas em ambientes reais, uma sequência de
+macrobenchmarks foi executada. Para tal, utilizamos a ferramenta de benchmarks
+{\it filebench} por ser amplamente utilizada e por conter
+diversos workloads pré-definidos, simulando o padrão real de acesso em
+servidores com diferentes finalidades. Os workloads pré-definidos utilizados
+neste experimento são descritos abaixo.
+
+{\bf Webserver:} Simula o padrão de acesso de um servidor Web. O workload,
+predominantemente de leitura, executa um conjunto de operações do tipo {\it
+open-read-close} em diferentes arquivos de 16 KB, contando com um total de
+50.000 arquivos. Além disso, há um fluxo de operações do tipo {\it append} que
+simula a escrita em arquivos de log.
+
+{\bf Fileserver:} Emula o funcionamento de um servidor de arquivos. O workload
+consiste em uma sequência de operações de criação, exclusão, escrita, leitura e
+operações sobre meta-dados em um conjunto de 10.000 arquivos, com tamanho de,
+em média, 128 KB.
+
+{\bf Varmail:} Simula a atividade de I/O de um servidor de e-mails que armazena
+cada mensagem como um arquivo individual. O workload consiste em uma sequência
+de operações do tipo {\it create-append-sync}, {\it read-append-sync}, leitura
+e exclusão de arquivos em um mesmo diretório.
+
+{\bf Oltp:} Emula o padrão de acesso de um banco de dados transacional. Este
+workload testa o desempenho de múltiplas operações aleatórias de leitura e
+escrita sensíveis à latência. O padrão de acesso é baseado no banco de dados
+Oracle 9i.
+
+% XXX colocar essa informacao aqui
+%Todos os testes foram executados de $3$ a $5$ vezes sendo desprezados aqueles
+%resultados que possuem uma diferença superior a $10\%$ em relação aos demais.
+%Para evitar problemas com a cache, utilizamos em todos os testes dois
+%parâmetros de memória RAM; um com uma memória RAM contendo de $50\%$ a $70\%$
+%do total de dados escritos/lidos em disco e outro com a memória duas vezes ou
+%mais capacidade da quantidade de dados a serem lidos/escritos no disco. Para
+%conhecimento de linha de base da largura de banda da rede, utilizamos o
+%\textit{netperf}, que nos deu como parâmetros $117,67$ MB/s para o MTU
+%configurado em $1500$ bytes e  $123.74$ MB/s para o MTU em $9000$ bytes.
+
+Em todos os workloads, o número de threads foi ajustado de forma a não
+sobrecarregar a CPU e influenciar o resultado obtido pelos testes.
+Nas Subseções seguintes, apresentamos os resultados obtidos através dos
+experimentos sob três dimensões: vazão no acesso ao disco remoto (Subseção
+\ref{exp_disco}), utilização de CPU (Subseção \ref{exp_cpu}) e utilização de
+rede (Subseção \ref{exp_rede}).
+
+
+\subsection{Vazão de Disco}
+\label{exp_disco}
+
+A Figura \ref{throughput} apresenta os resultados obtidos através dos
+diferentes workloads. Nos gráficos, o eixo horizontal mostra a execução
+dos experimentos no disco local e utilizando os protocolos de armazenamento
+remoto. Para cada grupo de barras, são apresentadas as execuções com quantidades
+diferentes de memória disponível ao sistema (512 MB e 4 GB) e MTU (1500 e 9000
+bytes). Para os testes de acesso local, apenas a quantidade de memória é
+alterada. Limitamos a quantidade de memória disponível ao sistema para amenizar o efeito
+das caches no resultado obtido, visto que são implementadas em diversos níveis
+do sistema operacional, como caches de
+blocos, páginas e mesmo dentro do subsistema SCSI. Mesmo assim, durante todos os
+experimentos houve memória suficiente às aplicações, não havendo uso de {\it
+swap}. O eixo vertical apresenta a vazão obtida. 
+
+\begin{figure}[h]
+\centering 
+\subfigure[webserver-throughput][Webserver] {
+	\includegraphics[width=7cm]{img/webserver-throughput.pdf}
+	\label{webserver-throughput} 
+} 
+\quad
+\subfigure[fileserver-throughput][Fileserver] {
+	\includegraphics[width=7cm]{img/fileserver-throughput.pdf}
+	\label{fileserver-throughput} 
+} 
+\quad 
+\subfigure[varmail-throughput][Varmail] {
+	\includegraphics[width=7cm]{img/varmail-throughput.pdf}
+	\label{varmail-throughput} 
+}	
+\quad 
+\subfigure[oltp-throughput][Oltp] {
+	\includegraphics[width=7cm]{img/oltp-throughput.pdf} 
+	\label{oltp-throughput} 
+}
+\quad 
+\subfigure { 
+	\includegraphics[width=15cm]{img/legenda-geral} 
+}
+\caption{Vazão de disco alcançada por diferentes tipos de workloads em cenários
+de execução diversos. Onde indicado, o valor correto das barras foi modificado
+para melhor visualização dos resultados.}
+\label{throughput} 
+\end{figure}
+
+%Através da análise dos gráficos e da tabela, ressaltamos a seguir alguns fatos
+%importantes.
+
+% XXX - coloquei aqui um pouco da informacao.. 
+% dá p/ falar na discussão... ass.: leo
+% XXX - isso a gente tem que falar mais pra cima. acho que na hora que
+% descrevemos os testes ou qdo falamos dos macrobenchmarks
+%Isto revela o impacto da cache na análise dos resultados e justifica o porquê
+%da necessidade de se utilizar uma memória menor nos testes a fim de evitar este
+%tipo comportamento, pois assim é possível \textit{"forçar"} os mecanismos de
+%cache a causarem pouco impacto nos resultados, visto que é extremamente difícil
+%se manipular todos os parâmetros de cache e buffer, principalmente quando em
+%dispositivos de entrada e saída que estão conectados remotamente e possuem
+%cache em disco, do SO e do protocolo (TCP no caso do iSCSI) de ambos os lados
+%da conexão. Tudo isto leva a crer que uma memória RAM menor, nestes casos torna
+%os resultados dos testes mais realistas. Outro fato observado é que, todas as
+%vezes que a memória principal estava configurada sob valores altos, ao final do
+%benchmark a memória estava quase que totalmente cheia de páginas sujas e ia
+%esvaziando aos poucos, o que gera ressalvas quanto à utilização de escrita com
+%grande áreas destinadas para caches na máquina do \textit{initiator},
+%principalmente quando se trata de serviços críticos.
+
+Em workloads de leitura predominante, como o {\it webserver}, mostrado na
+Figura \ref{webserver-throughput}, o uso de caches atenua a diferença de vazão
+entre os protocolos. Como esperado, este resultado segue o comportamento
+encontrado na execução dos microbenchmarks de leitura sequencial.  Em todos os
+casos de teste, invariavelmente, ao fornecer memória RAM suficiente ao sistema
+(4 GB), a variação dos resultados entre os protocolos é desprezível ---
+inferior a $1\%$.  Caso a quantidade de memória disponível ao sistema seja
+escassa, simulado pelo caso de teste de 512 MB, é possível observar que o
+protocolo AoE possui melhor desempenho, em torno de $8\%$, devido ao {\it overhead}
+de processamento das camadas rede. Entretanto, considerando a quantidade e
+tamanho dos arquivos criados pelo benchmark, e que servidores atuais possuem,
+em geral, mais do que 4 GB de memória RAM, afirmamos empiricamente que {\it o
+uso de cache iguala o desempenho dos protocolos em workloads de leitura
+predominante}.
+
+Já em workloads que executam massivas operações de escrita, como é o caso do
+{\it fileserver}, o protocolo iSCSI apresenta melhor desempenho, em média $9\%$,
+independentemente do MTU empregado. A utilização da política de cache {\it
+write-back} nas escritas, onde as operações são efetuadas localmente na memória
+da máquina {\it initiator} e depois executadas remotamente em momento oportuno,
+garante que o desempenho percebido seja superior ao do protocolo AoE.  Nos
+casos testados, quanto maior a quantidade de memória, e consequentemente o
+espaço disponível para cache, maior é o aumento na vazão. Assim, concluímos que
+{\it o protocolo iSCSI apresenta melhor desempenho em workloads de escrita
+predominante, caso haja espaço suficiente para cache.}
+
+Quando o workload consiste em um número balanceado de operações de escrita e
+leitura, como no workload {\it varmail}, o protocolo AoE mostra desempenho
+$11,2\%$ superior. Por um lado, a quantidade de 
+operações de escrita não é
+suficientemente grande para que o iSCSI beneficie-se de seu melhor desempenho
+em escritas; por outro, as operações de leitura não são exclusivamente
+sequenciais (já que as operações ocorrem sobre múltiplos arquivos). Assim, o
+{\it overhead} do protocolo iSCSI torna-se determinante na vazão alcançada por
+este experimento.
+
+Por fim, no caso do workload {\it oltp}, onde o padrão predominante é a escrita
+aleatória, o protocolo AoE apresenta melhor desempenho em todos os resultados, 
+em média $19\%$.
+Novamente, este resultado é semelhante ao encontrado nos testes com
+microbenchmarks.  Todavia, é importante ressaltar que, apesar do aumento na
+quantidade de memória disponível para caches, não houve aumento significativo
+na vazão. Isso ocorre porque parte das operações executados pelo workload são
+realizadas sem cache (utilizando a flag O\_DIRECT). Assim, notamos que
+em todas as configurações deste workload o protocolo AoE obteve melhor
+desempenho.
+
+
+\subsection{Utilização de CPU}
+\label{exp_cpu}
+
+A Figura \ref{cpu} apresenta a utilização de CPU em cada caso de teste.  O eixo
+horizontal apresenta os mesmos grupos de barras do teste anterior; o eixo
+vertical, a média do tempo de CPU gasto por cada operação de I/O emitida pelo
+benchmark. Quanto menor o tempo de processamento, mais eficiente em termos de CPU
+o protocolo é considerado.
+
+\begin{figure}[t] 
+\centering
+\subfigure[webserver-cpu][Webserver] {
+	\includegraphics[width=7cm]{img/webserver-cpu.pdf} 
+	\label{webserver-cpu} 
+}
+\quad 
+\subfigure[fileserver-cpu][Fileserver] {
+	\includegraphics[width=7cm]{img/fileserver-cpu.pdf} 
+	\label{fileserver-cpu} 
+}
+\quad 
+\subfigure[varmail-cpu][Varmail] {
+	\includegraphics[width=7cm]{img/varmail-cpu.pdf} 
+	\label{varmail-cpu} 
+}	
+\quad
+\subfigure[oltp-cpu][Oltp] { 
+	\includegraphics[width=7cm]{img/oltp-cpu.pdf}
+	\label{oltp-cpu} 
+} 
+\quad 
+\subfigure { 
+	\includegraphics[width=15cm]{img/legenda-geral}
+}	
+\caption{Tempo de CPU por operação de I/O em diferentes workloads.} 
+\label{cpu}
+\end{figure}
+
+Através dos resultados, é possível observar que o protocolo iSCSI apresenta
+maior utilização de CPU em todos os testes realizados. Este
+comportamento é esperado devido à camada em o que o protocolo opera, pois
+acrescenta o {\it overhead} de processamento das camadas de transporte e rede,
+quando comparado ao protocolo AoE, que opera diretamente na camada de enlace.
+Este fato pode ser percebido em todos os casos, e independe do resultado da
+vazão alcançada pelos protocolos. Entretanto, apesar do protocolo iSCSI
+apresentar maior utilização de CPU em todos os casos, o uso de caches diminui
+significativamente a diferença entre a utilização de CPU dos protocolos, de
+$22,2\%$ sem cache para $15\%$ com cache, na medida em que distribui o {\it overhead} das operações custosas realizadas no
+servidor remoto entre as operações que acertaram a cache local. Assim, o uso de
+caches diminui significativamente a quantidade de processamento necessária por
+operação, aumentando a eficiência de CPU de ambos os protocolos.
+
+Além disso, pode-se observar que em grande parte dos testes, como esperado,
+aumentar o MTU da interface de rede pode diminuir o tempo de CPU gasto por
+operação pelos dois protocolos. Isso ocorre pois, como o número de quadros
+Ethernet enviados é menor, menor é o tempo de processamento necessário para
+interpretá-lo.
+
+
+\subsection{Utilização de Rede}
+\label{exp_rede}
+
+A Figura \ref{rede} apresenta a quantidade total de bytes transmitidos e
+recebidos divididos pelo número total de operações realizadas em cada caso de
+teste. O eixo horizontal apresenta os mesmos grupos de barras dos testes
+anteriores; o eixo vertical, o número médio de bytes por operação realizada pelo
+benchmark. É importante notar que, como parte das operações é executada em
+cache sem utilizar a interface de rede, o valor apresentado não reflete a
+quantidade real de rede utilizada por operação; entretanto, o valor é utilizado
+como métrica para comparação, na medida em que reflete a eficiência em termos de
+rede dos protocolos sob diferentes configurações.
+
+\begin{figure}[t] 
+\centering
+\subfigure[webserver-rede][Webserver] {
+	\includegraphics[width=7cm]{img/webserver-rede.pdf} 
+	\label{webserver-rede}
+}
+\quad 
+\subfigure[fileserver-rede][Fileserver] {
+	\includegraphics[width=7cm]{img/fileserver-rede.pdf} 
+	\label{fileserver-rede}
+}
+\quad 
+\subfigure[varmail-rede][Varmail] {
+	\includegraphics[width=7cm]{img/varmail-rede.pdf} 
+	\label{varmail-rede} }
+\quad 
+\subfigure[oltp-rede][Oltp] {
+	\includegraphics[width=7cm]{img/oltp-rede.pdf} 
+	\label{oltp-rede} 
+} 
+\quad
+\subfigure { 
+	\includegraphics[width=13cm]{img/legenda-rede} 
+}
+\caption{Quantidade de dados trafegado na rede (transmitido + recebido) por
+operação.} 
+\label{rede}
+\end{figure}
+
+
+% XXX - tentei resumir aqui.
+%Um dos principais pontos que observamos na Figura \ref{rede} é que, quando se
+%utiliza uma memória RAM maior (4 GB), a quantidade de bytes enviados e
+%recebidos do começo ao final do benchmark é muito menor do que com uma memória
+%RAM de 512 MB. 
+Como esperado, em todos os casos, quanto maior a quantidade de memória
+disponível ao sistema, menor é a quantidade de dados trafegados na rede, devido
+à maior quantidade de operações realizadas em cache local. Da mesma forma, na
+maioria dos casos testados o AoE possui melhor eficiência de uso de rede 
+(média de $3\%$ para Webserver, Varmail e Oltp), devido
+a ausência do {\it overhead} introduzido pelas camadas adicionais no iSCSI, com
+uma exceção: no workload {\it fileserver}, como o iSCSI utiliza o cache com mais
+eficiência na escrita, consequentemente sua utilização de rede é menor ($3,26\%$).
+
+% show de bola a sacada final...
+Além disso, na maioria dos casos, aumentar o MTU na interface de rede
+melhora a eficiência na utilização de rede, pois mais dados são enviados em um
+mesmo quadro Ethernet, diminuindo assim o {\it overhead} introduzido pelos
+cabeçalhos. Nos poucos casos em que ocorre o contrário, memória RAM limitada é
+utilizada (512 MB); nesses, acreditamos que a alocação de buffers maiores para
+os quadros Ethernet diminua a quantidade de memória disponível para a cache de
+disco, diminuindo a taxa de acerto em cache e portanto aumentando a utilização
+de rede.
+
+
+\subsection{Discussão}
+\label{discussao}
+
+Através do conjunto de experimentos executados, observamos que o protocolo AoE
+apresenta melhor desempenho global, de cerca de $9\%$. Contudo, ao fornecer quantidade
+suficiente de memória ao sistema, o protocolo iSCSI alcança melhor resultado
+em workloads de escrita predominante, devido a mecanismos inteligentes de
+cache, e resultado muito próximo ao AoE, mas ainda inferior, em workloads
+de leitura. Ainda assim, é possível afirmar que o protocolo iSCSI é uma boa
+alternativa para a maioria dos workloads, considerando que servidores atuais
+possuem quantidade considerável de memória RAM e que o protocolo iSCSI possui
+outras vantagens, como o fato de ser roteável e possibilidade de utilização de
+criptografia, através de IPSec.
+
+Apesar disso, em workloads que não utilizam exaustivamente o mecanismo de cache
+do sistema operacional, como o Oltp, em que as caches são geralmente gerenciadas pela
+própria aplicação, o iSCSI também apresenta desempenho inferior. Nestes casos,
+sob todas as dimensões (vazão, CPU e rede) e protocolo AoE apresenta melhor
+desempenho, sendo, definitivamente, a melhor solução.
+
+Outro fato a ser considerado é que o protocolo iSCSI apresenta, invariavelmente,
+{\it overhead} de CPU de cerca de $19\%$ quando comparado ao AoE. Assim, caso haja restrições
+de processamento, a utilização do protocolo iSCSI deve ser evitada. Quanto à
+utilização de rede, a eficiência do protocolo iSCSI é cerca de $3\%$ menor se
+comparado ao AoE; entretanto, considerando os fatos observados e a capacidade das 
+redes atuais (1, 10 e até 40 Gbps), em poucos casos a capacidade da rede pode
+limitar a vazão no acesso ao disco. Finalmente, o aumento do MTU dos quadros
+Ethernet melhora a vazão em todos os casos, além de diminuir a quantidade de
+processamento e a utilização de rede. O aumento do MTU deve ser evitado somente
+quando a quantidade de memória for limitada, onde os buffers alocados para os
+quadros maiores possam concorrer com o mecanismo de cache de disco.
+
+%\subsection{Observações Finais}
+%\label{conclusao}
+
+Estes protocolos, além de amplamente utilizados em SANs de ambientes de computação em nuvem e virtualização, não
+necessitam de hardware especializado e possuem implementações de código livre, diferentemente do protocolo FC. Através de um conjunto extensivo de experimentos, baseados tanto em microbenchmarks como em macrobenchmarks,
+analisamos as principais características desses protocolos em termos de vazão de dados, quantidade de memória cache, utilização de CPU e rede.
+
+Observamos a partir de nossos experimentos que o protocolo iSCSI apresenta cerca de $9\%$ de aumento na vazão em workloads de escrita predominante e desempenho muito próximo ao AoE em workloads de leitura (próximo a $1\%$ no caso do webserver), caso haja memória suficiente para cache. Apesar disso, o AoE é a melhor opção para workloads que evitam o mecanismo de cache do sistema operacional, como bancos de dados Oltp. Ademais, o protocolo iSCSI é menos eficiente em termos de CPU e utilização de rede sob qualquer workload.
+
+Dando continuidade a este trabalho, pretendemos analisar outros aspectos dos protocolos, como sua escalabilidade, confiabilidade na presença de falhas e interações com sistemas de arquivos. Acreditamos que nosso trabalho possa auxiliar administradores de infraestrutura a melhor entender o funcionamento destes protocolos sobre diferentes workloads, bem como suas implicações sobre utilização de memória, CPU e rede, ajudando-os a escolher o melhor protocolo para cada caso, além de dimensionar corretamente a quantidade de recursos necessários.
+
+
+Serão executados testes de análise de performance sobre o protocolo, a rede, os
+discos e outras tecnologias envolvidas, como o servidor Web e o servidor de
+banco de dados.
+
+%\chapter{Apresentação da Solução Tecnológica} % Apresentação da Solução Tecnológica
+%\label{apresentacao_solucao_tecn}
+
+%[A preencher...]
+
+\chapter{Conclusão} % Conclusão e Trabalhos Futuros
+\label{conclusao}
+
+Este trabalho visa facilitar o uso de um protocolo código-aberto para o
+compartilhamento de arquivos em alta disponibilidade, tornando esta tarefa
+acessível a qualquer pessoa que assim o desejar.
+
+Com a crescente demanda sobre esta área, principalmente no que se refere à
+virtualização de servidores, o que necessita de um armazenamento distribuído,
+este trabalho tenta trazer simplicidade ao uso de protocolos de armazenamento de
+dados para estas novas tendências, em especial por este recurso poder ser
+utilizado por qualquer pessoa, por conta de sua característica de software
+livre.
+
+Para trabalhos futuros, podem ser efetuadas mudanças no próprio protocolo,
+visando o aumento da sua performance em situações específicas, como no caso da
+sua utilização em conjunto com RAID (\textit{Redundant Array of Independent
+Drives}).
+
+\chapter{Cronograma}
+\label{cronograma}
+
+O cronograma \ref{cronograma_fig} representa apenas uma hipótese temporal
+projeto a ser desenvolvido, podendo ser adaptado ao longo do projeto.
+
+\begin{figure}[h]
+    \includegraphics[scale=0.8]{img/tab-cronograma}
+	\centering
+    \caption{Cronograma do Projeto.}
+    \label{cronograma_fig}
+\end{figure} 
+
+
+%---------- Referencias ----------
+%\bibliographystyle{abnt-num} % habilita colchetes
+\bibliography{reflatex} % geracao automatica das referencias a partir do arquivo reflatex.bib
+
+
+%%---------- Apendices (opcionais) ----------
+%\apendice
+%\chapter{Nome do Ap\^endice}
+
+%Use o comando {\ttfamily \textbackslash apendice} e depois comandos {\ttfamily \textbackslash chapter\{\}} para gerar t\'itulos de ap\^en-dices.
+
+
+%% ---------- Anexos (opcionais) ----------
+%\anexo
+%\chapter{Nome do Anexo}
+
+%Use o comando {\ttfamily \textbackslash anexo} e depois comandos {\ttfamily \textbackslash chapter\{\}}
+%para gerar t\'itulos de anexos.
+
+
+% --------- Lista de siglas --------
+%\textbf{* Observa\c{c}\~oes:} a lista de siglas nao realiza a ordenacao das siglas em ordem alfabetica
+% Em breve isso sera implementado, enquanto isso:
+%\textbf{Sugest\~ao:} crie outro arquivo .tex para siglas e utilize o comando \sigla{sigla}{descri\c{c}\~ao}.
+%Para incluir este arquivo no final do arquivo, utilize o comando \input{arquivo.tex}.
+%Assim, Todas as siglas serao geradas na ultima pagina. Entao, devera excluir a ultima pagina da versao final do arquivo
+% PDF do seu documento.
+
+
+%-------- Citacoes ---------
+% - Utilize o comando \citeonline{...} para citacoes com o seguinte formato: Autor et al. (2011).
+% Este tipo de formato eh utilizado no comeco do paragrafo. P.ex.: \citeonline{autor2011}
+
+% - Utilize o comando \cite{...} para citacoeses no meio ou final do paragrafo. P.ex.: \cite{autor2011}
+
+
+
+%-------- Titulos com nomes cientificos (titulo, capitulos e secoes) ----------
+% Regra para escrita de nomes cientificos:
+% Os nomes devem ser escritos em italico, 
+%a primeira letra do primeiro nome deve ser em maiusculo e o restante em minusculo (inclusive a primeira letra do segundo nome).
+% VEJA os exemplos abaixo.
+% 
+% 1) voce nao quer que a secao fique com uppercase (caixa alta) automaticamente:
+%\section[nouppercase]{\MakeUppercase{Estudo dos efeitos da radiacao ultravioleta C e TFD em celulas de} {\textit{Saccharomyces boulardii}}
+%
+% 2) por padrao os cases (maiusculas/minuscula) sao ajustados automaticamente, voce nao precisa usar makeuppercase e afins.
+% \section{Introducao} % a introducao sera posta no texto como INTRODUCAO, automaticamente, como a norma indica.
+
+\end{document}

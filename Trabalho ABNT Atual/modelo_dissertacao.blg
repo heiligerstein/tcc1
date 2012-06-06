@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: modelo_dissertacao.aux
+The style file: abnt-num.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: abnt-options.bib
+Database file #2: reflatex.bib
+Warning--I didn't find a database entry for "abnt-etal-list=99"
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
++---------------------------------------------------------+
+| Estilo bibliografico abnt-num.bst versao 1.49           |
+| Implementa a NBR6023, NBR10520 e NBR10523               |
+| Em caso de duvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 9 entries,
+            6523 wiz_defined-function locations,
+            1207 strings with 10282 characters,
+and the built_in function-call counts, 6661 in all, are:
+= -- 839
+> -- 74
+< -- 2
++ -- 138
+- -- 24
+* -- 341
+:= -- 848
+add.period$ -- 28
+call.type$ -- 11
+change.case$ -- 59
+chr.to.int$ -- 15
+cite$ -- 6
+duplicate$ -- 201
+empty$ -- 570
+format.name$ -- 116
+if$ -- 1771
+int.to.chr$ -- 2
+int.to.str$ -- 2
+missing$ -- 137
+newline$ -- 44
+num.names$ -- 12
+pop$ -- 173
+preamble$ -- 1
+purify$ -- 30
+quote$ -- 0
+skip$ -- 753
+stack$ -- 1
+substring$ -- 227
+swap$ -- 85
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 37
+warning$ -- 0
+while$ -- 25
+width$ -- 0
+write$ -- 89
+(There was 1 warning)

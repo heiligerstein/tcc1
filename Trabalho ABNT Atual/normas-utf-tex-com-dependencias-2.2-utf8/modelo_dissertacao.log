@@ -1,0 +1,37 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.8)  8 DEC 2011 15:56
+entering extended mode
+ %&-line parsing enabled.
+**modelo_dissertacao.tex
+(./modelo_dissertacao.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, portuguese, loaded.
+(./normas-utf-tex.cls (./cvs-id.def)
+Document Class: normas-utf-tex 2011/06/19 v2.0
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+
+! LaTeX Error: File `lastpage.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.33 \RequirePackage
+                    {perpage}^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 80 strings out of 495041
+ 1000 string characters out of 1181897
+ 45484 words of memory out of 3000000
+ 3351 multiletter control sequences out of 15000+50000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 30 hyphenation exceptions out of 8191
+ 19i,0n,12p,156b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,49 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.49 }
+
+\bibitem{youtube}
+\abntrefinfo{YouTube\ldots}{YOUTUBE\ldots}{2011}
+{YOUTUBE - Broadcast Yourself. [S.l.]: 2011 YouTube, LLC, 2011.
+\url{http://www.youtube.com/}.
+Acesso em: 20 set. 2011.}
+
+\bibitem{4shared}
+\abntrefinfo{4shared\ldots}{4SHARED\ldots}{2005}
+{4SHARED.COM - free file sharing and storage. [S.l.]: 4shared.com, 2005.
+\url{http://www.4shared.com/}.
+Acesso em: 20 set. 2011.}
+
+\bibitem{sourceforge}
+\abntrefinfo{SourceForge\ldots}{SOURCEFORGE\ldots}{2011}
+{SOURCEFORGE.NET: Find, Create, and Publish Open Source software for free.
+  [S.l.]: 2011 Geeknet, Inc, 2011.
+\url{http://sourceforge.net/}.
+Acesso em: 20 set. 2011.}
+
+\bibitem{iscsi_rfc}
+\abntrefinfo{Satran et al.}{SATRAN et al.}{2004}
+{SATRAN, J. et al. \textbf{{Internet Small Computer Systems Interface
+  (iSCSI)}}. IETF, abr. 2004.
+RFC 3720 (Proposed Standard).
+ (Request for Comments, 3720). Updated by RFCs 3980, 4850, 5048.
+Dispon{\'\i}vel em: $<$http://www.ietf.org/rfc/rfc3720.txt$>$.}
+
+\bibitem{fibre_channel}
+\abntrefinfo{Clark}{CLARK}{1999}
+{CLARK, T. \textbf{Designing storage area networks: a practical reference for
+  implementing Fibre Channel SANs}. Boston, MA, USA: Addison-Wesley Longman
+  Publishing Co., Inc., 1999.
+ISBN 0-201-61584-3.}
+
+\bibitem{aoe_specification}
+\abntrefinfo{Hopkins e Coile}{HOPKINS; COILE}{2001}
+{HOPKINS, S.; COILE, B. \textbf{ATA over Ethernet Specification}. [S.l.]: The
+  Brantley Coile Company, Inc, 2001.
+\url{http://support.coraid.com/documents/AoEr11.txt}.
+Acesso em: 20 set. 2011.}
+
+\end{thebibliography}

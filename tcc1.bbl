@@ -1,0 +1,219 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.52 }
+
+\bibitem[4shared.com - free file sharing and storage 2005]{4shared}
+\abntrefinfo{4shared\ldots}{4SHARED\ldots}{2005}
+{4SHARED.COM - free file sharing and storage. [S.l.]: 4shared.com, 2005.
+\url{http://www.4shared.com/}.
+Acesso em: 20 set. 2011.}
+
+\bibitem[Aiken et al. 2003]{art_perf_iscsi}
+\abntrefinfo{Aiken et al.}{AIKEN et al.}{2003}
+{AIKEN, S. et al. A performance analysis of the iscsi protocol. In:
+  \textbf{Mass Storage Systems and Technologies, 2003. (MSST 2003).
+  Proceedings. 20th IEEE/11th NASA Goddard Conference on}. [S.l.: s.n.], 2003.
+  p. 123 -- 134.}
+
+\bibitem[Ambler 2002]{orm}
+\abntrefinfo{Ambler}{AMBLER}{2002}
+{AMBLER, S.~W. \textbf{Mapping Objects to Relational Databases: O/R Mapping In
+  Detail}. [S.l.]: Ambysoft Inc, 2002.
+\url{http://www.agiledata.org/essays/mappingObjects.html}.
+Acesso em: 19 set. 2011.}
+
+\bibitem[ATA over Ethernet Tools 2012]{aoe-tools}
+\abntrefinfo{ATA\ldots}{ATA\ldots}{2012}
+{ATA over Ethernet Tools. [S.l.]: Coraid, 2012.
+\url{http://aoetools.sourceforge.net/}.
+Acesso em: 15 mai. 2012.}
+
+\bibitem[CakePHP: the rapid development php framework 2005]{cakephp}
+\abntrefinfo{CakePHP\ldots}{CAKEPHP\ldots}{2005}
+{CAKEPHP: the rapid development php framework. [S.l.]: Cake Software Foundation
+  ©, Inc, 2005.
+\url{http://cakephp.org/}.
+Acesso em: 19 set. 2011.}
+
+\bibitem[Case Studies 2012]{mysql-2}
+\abntrefinfo{Case\ldots}{CASE\ldots}{2012}
+{CASE Studies. [S.l.]: Oracle Corporation and/or its affiliates, 2012.
+\url{http://www.mysql.com/why-mysql/case-studies/}.
+Acesso em: 14 set. 2011.}
+
+\bibitem[Chuang e Wenbi 2009]{aoe-iscsi}
+\abntrefinfo{Chuang e Wenbi}{CHUANG; WENBI}{2009}
+{CHUANG, H.; WENBI, R. \textbf{Modeling and Performance Evaluation of the AoE
+  Protocol}. [S.l.]: IEEE Press, 2009.
+609--6012~p.}
+
+\bibitem[Clark 1999]{fibre_channel}
+\abntrefinfo{Clark}{CLARK}{1999}
+{CLARK, T. \textbf{Designing storage area networks: a practical reference for
+  implementing Fibre Channel SANs}. Boston, MA, USA: Addison-Wesley Longman
+  Publishing Co., Inc., 1999.
+ISBN 0-201-61584-3.}
+
+\bibitem[Fasheh 2006]{ocfs}
+\abntrefinfo{Fasheh}{FASHEH}{2006}
+{FASHEH, M. \textbf{OCFS2: The Oracle Clustered File System, Version 2}. 2006.
+Maio de 2007:
+  \url{http://oss.oracle.com/projects/ocfs2/dist/documentation/fasheh.pdf}.}
+
+\bibitem[Follett 2001]{fc-comp2}
+\abntrefinfo{Follett}{FOLLETT}{2001}
+{FOLLETT, D. \textbf{Distributed storage networking architectures: fibre
+  channel, iSCSI, ethernet, infiniband, hyper transport, rapid IO and 3GIO
+  collide in the data center}. 2001.
+159~p.}
+
+\bibitem[Fundamentals of Networked Storage 2008]{fundamentals-netw-stor}
+\abntrefinfo{Fundamentals\ldots}{FUNDAMENTALS\ldots}{2008}
+{FUNDAMENTALS of Networked Storage. [S.l.]: Coraid, Inc, 2008.
+\url{http://www.vmworld.com/docs/DOC-1374}.}
+
+\bibitem[Gerdelan et al. 2007]{cost-effective}
+\abntrefinfo{Gerdelan et al.}{GERDELAN et al.}{2007}
+{GERDELAN, A.; JOHNSON, M.; MESSOM, C. Performance analysis of virtualised head
+  nodes utilising cost-effective network attached storage. In:
+  \textbf{Proceedings of the Asian Particle Accelerator Conference}. [S.l.:
+  s.n.], 2007.}
+
+\bibitem[Hopkins e Coile 2001]{aoe_specification}
+\abntrefinfo{Hopkins e Coile}{HOPKINS; COILE}{2001}
+{HOPKINS, S.; COILE, B. \textbf{ATA over Ethernet Specification}. [S.l.]: The
+  Brantley Coile Company, Inc, 2001.
+\url{http://support.coraid.com/documents/AoEr11.txt}.}
+
+\bibitem[Landowski e Curran 2011]{aoe-mpls}
+\abntrefinfo{Landowski e Curran}{LANDOWSKI; CURRAN}{2011}
+{LANDOWSKI, M.; CURRAN, P.~F. Aoe storage protocol over mpls network. In:
+  \textbf{Proceedings of the 2011 IEEE 27th Symposium on Mass Storage Systems
+  and Technologies}. Washington, DC, USA: IEEE Computer Society, 2011.  (MSST
+  '11), p.~1--5.
+ISBN 978-1-4577-0427-7. Dispon{\'\i}vel em:
+  $<$http://dx.doi.org/10.1109/MSST.2011.5937231$>$.}
+
+\bibitem[Lewis 2006]{lvm-howto}
+\abntrefinfo{Lewis}{LEWIS}{2006}
+{LEWIS, A. \textbf{LVM HOWTO}. [S.l.]: The Linux Documentation Project, 2006.
+\url{http://www.tldp.org/HOWTO/LVM-HOWTO/}.}
+
+\bibitem[LoBue et al. 2002]{storage-interfaces}
+\abntrefinfo{LoBue et al.}{LOBUE et al.}{2002}
+{LOBUE, M.~T. et al. Surveying today's most popular storage interfaces.
+\textbf{Computer}, IEEE Computer Society Press, Los Alamitos, CA, USA, v.~35,
+  n.~12, p. 48--55, dez. 2002.
+ISSN 0018-9162.
+Dispon{\'\i}vel em: $<$http://dx.doi.org/10.1109/MC.2002.1106179$>$.}
+
+\bibitem[Patterson et al. 1988]{raid-patterson}
+\abntrefinfo{Patterson et al.}{PATTERSON et al.}{1988}
+{PATTERSON, D.~A.; GIBSON, G.~A.; KATZ, R.~H. A case for redundant arrays of
+  inexpensive disks (raid). In:  \textbf{SIGMOD Conference}. [S.l.: s.n.],
+  1988. p. 109--116.}
+
+\bibitem[PHP: Hypertext Preprocessor 2001]{php}
+\abntrefinfo{PHP\ldots}{PHP\ldots}{2001}
+{PHP: Hypertext Preprocessor. [S.l.]: The PHP Group, 2001.
+\url{http://www.php.net/manual/en/index.php}.
+Acesso em: 14 set. 2011.}
+
+\bibitem[Satran et al. 2004]{iscsi_rfc}
+\abntrefinfo{Satran et al.}{SATRAN et al.}{2004}
+{SATRAN, J. et al. \textbf{{Internet Small Computer Systems Interface
+  (iSCSI)}}. IETF, abr. 2004.
+RFC 3720 (Proposed Standard).
+ (Request for Comments, 3720). Updated by RFCs 3980, 4850, 5048.
+Dispon{\'\i}vel em: $<$http://www.ietf.org/rfc/rfc3720.txt$>$.}
+
+\bibitem[SourceForge.net: Find, Create, and Publish Open Source software for
+  free 2011]{sourceforge}
+\abntrefinfo{SourceForge\ldots}{SOURCEFORGE\ldots}{2011}
+{SOURCEFORGE.NET: Find, Create, and Publish Open Source software for free.
+  [S.l.]: 2011 Geeknet, Inc, 2011.
+\url{http://sourceforge.net/}.
+Acesso em: 20 set. 2011.}
+
+\bibitem[Tan et al. 2005]{fc-perf}
+\abntrefinfo{Tan et al.}{TAN et al.}{2005}
+{TAN, Y. et al. A high-throughput fibre channel data communication service. In:
+   \textbf{Sixth International Conference on Parallel and Distributed
+  Computing, Applications and Technologies.} [S.l.: s.n.], 2005. p. 975--978.}
+
+\bibitem[Tanenbaum 2010]{sistemas-operacionais-tanenbaum}
+\abntrefinfo{Tanenbaum}{TANENBAUM}{2010}
+{TANENBAUM, A.~S. \textbf{Sistemas Operacionais Modernos}. trad. 3 ed. S\~ao
+  Paulo: Pearson, 2010.}
+
+\bibitem[Trygve/MVC 2011]{mvc}
+\abntrefinfo{Trygve/MVC}{TRYGVE/MVC}{2011}
+{TRYGVE/MVC. 2011.
+\url{http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html}.
+Acesso em: 19 set. 2011.}
+
+\bibitem[Vaghani 2010]{vmfs}
+\abntrefinfo{Vaghani}{VAGHANI}{2010}
+{VAGHANI, S.~B. Virtual machine file system.
+\textbf{SIGOPS Oper. Syst. Rev.}, ACM, New York, NY, USA, v.~44, n.~4, p.
+  57--70, dez. 2010.
+ISSN 0163-5980.
+Dispon{\'\i}vel em: $<$http://doi.acm.org/10.1145/1899928.1899935$>$.}
+
+\bibitem[Voruganti e Sarkar 2001]{fc-comp}
+\abntrefinfo{Voruganti e Sarkar}{VORUGANTI; SARKAR}{2001}
+{VORUGANTI, K.; SARKAR, P. An analysis of three gigabit networking protocols
+  for storage area networks. In:  \textbf{IEEE International Conference on
+  Performance, Computing, and Communications, 2001.} [S.l.: s.n.], 2001. p.
+  259--265.}
+
+\bibitem[Web Server Survey, 2007 2007]{apache-1}
+\abntrefinfo{Web\ldots}{WEB\ldots}{2007}
+{WEB Server Survey, 2007. [S.l.]: NetCraft Ltd, 2007.
+\url{http://news.netcraft.com/archives/2007/12/29/december_2007_web_server_sur%
+vey.html}.
+Acesso em: 15 mai. 2012.}
+
+\bibitem[Web Server Survey, 2010 2010]{apache-2}
+\abntrefinfo{Web\ldots}{WEB\ldots}{2010}
+{WEB Server Survey, 2010. [S.l.]: NetCraft Ltd, 2010.
+\url{http://news.netcraft.com/archives/2010/05/14/may_2010_web_server_survey.h%
+tml}.
+Acesso em: 15 mai. 2012.}
+
+\bibitem[What is the difference between SCSI and ATA? 2006]{diff_scsi_ata}
+\abntrefinfo{What\ldots}{WHAT\ldots}{2006}
+{WHAT is the difference between SCSI and ATA? [S.l.]: insideHPC, LLC, 2006.
+\url{http://insidehpc.com/2006/04/07/what-is-the-difference-between-scsi-and-a%
+ta/}.
+Acesso em: 26 mar. 2012.}
+
+\bibitem[Why Apache Software is Free 2012]{apache-foundation}
+\abntrefinfo{Why\ldots}{WHY\ldots}{2012a}
+{WHY Apache Software is Free. [S.l.]: Apache Software Foundation, 2012.
+\url{http://httpd.apache.org/ABOUT_APACHE.html}.
+Acesso em: 15 mai. 2012.}
+
+\bibitem[Why MySQL? 2012]{mysql-1}
+\abntrefinfo{Why\ldots}{WHY\ldots}{2012b}
+{WHY MySQL? [S.l.]: Oracle Corporation and/or its affiliates, 2012.
+\url{http://www.mysql.com/why-mysql/}.
+Acesso em: 15 mai. 2012.}
+
+\bibitem[YouTube - Broadcast Yourself 2011]{youtube}
+\abntrefinfo{YouTube\ldots}{YOUTUBE\ldots}{2011}
+{YOUTUBE - Broadcast Yourself. [S.l.]: 2011 YouTube, LLC, 2011.
+\url{http://www.youtube.com/}.
+Acesso em: 20 set. 2011.}
+
+\bibitem[Zhou e Chuang 2009]{aoe-perf}
+\abntrefinfo{Zhou e Chuang}{ZHOU; CHUANG}{2009}
+{ZHOU, C.; CHUANG, H. A performance analysis of the aoe protocol. In:
+  \textbf{Proceedings of the 5th International Conference on Wireless
+  communications, networking and mobile computing}. [S.l.]: IEEE Press, 2009.
+  p. 3938--3941.}
+
+\end{thebibliography}
