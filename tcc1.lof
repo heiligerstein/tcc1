@@ -13,19 +13,19 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura da Solu\c c\~ao.}}{22}
 \contentsline {figure}{\numberline {5}{\ignorespaces Cen\'ario de testes.}}{23}
 \contentsline {figure}{\numberline {6}{\ignorespaces Vaz\~ao dos disco alcan\c cada com diferentes par\^ametros de microbenchmark.}}{25}
-\contentsline {figure}{\numberline {7}{\ignorespaces Vaz\~ao de disco alcan\c cada por diferentes tipos de workloads em cen\'arios de execu\c c\~ao diversos. Onde indicado, o valor correto das barras foi modificado para melhor visualiza\c c\~ao dos resultados.}}{28}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-throughput}}{28}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-throughput}}{28}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-throughput}}{28}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-throughput}}{28}
-\contentsline {figure}{\numberline {8}{\ignorespaces Tempo de CPU por opera\c c\~ao de I/O em diferentes workloads.}}{29}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-cpu}}{29}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-cpu}}{29}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-cpu}}{29}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-cpu}}{29}
-\contentsline {figure}{\numberline {9}{\ignorespaces Quantidade de dados trafegado na rede (transmitido + recebido) por opera\c c\~ao.}}{30}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-rede}}{30}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-rede}}{30}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-rede}}{30}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-rede}}{30}
-\contentsline {figure}{\numberline {10}{\ignorespaces Cronograma do Projeto.}}{34}
+\contentsline {figure}{\numberline {7}{\ignorespaces Vaz\~ao de disco alcan\c cada por diferentes tipos de workloads em cen\'arios de execu\c c\~ao diversos. Onde indicado, o valor correto das barras foi modificado para melhor visualiza\c c\~ao dos resultados.}}{27}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-throughput}}{27}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-throughput}}{27}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-throughput}}{27}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-throughput}}{27}
+\contentsline {figure}{\numberline {8}{\ignorespaces Tempo de CPU por opera\c c\~ao de I/O em diferentes workloads.}}{28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-cpu}}{28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-cpu}}{28}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-cpu}}{28}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-cpu}}{28}
+\contentsline {figure}{\numberline {9}{\ignorespaces Quantidade de dados trafegado na rede (transmitido + recebido) por opera\c c\~ao.}}{29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-rede}}{29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-rede}}{29}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-rede}}{29}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-rede}}{29}
+\contentsline {figure}{\numberline {10}{\ignorespaces Cronograma do Projeto.}}{33}
