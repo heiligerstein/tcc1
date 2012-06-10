@@ -15,6 +15,9 @@
 
 \usepackage{url}
 
+%lipsum
+\usepackage{lipsum}
+
 % hyphenization
 \usepackage[brazilian]{babel}
 %\usepackage[T1]{fontenc} 
@@ -55,6 +58,29 @@
 %Podem utilizar GEOMETRY{...} para realizar pequenos ajustes das margens. Onde, left=esquerda, right=direita, top=superior, bottom=inferior. P.ex.:
 \usepackage{geometry}
 \geometry{left=3.0cm,right=2cm,top=3cm,bottom=1.5cm} 
+
+% acerta a margem superior em início de capítulos
+\makeatletter
+\def\@makechapterhead#1{%
+  {
+  \normalfont\ABNTchaptersize\ABNTchapterfont%
+  \espaco{simples}%
+  %\vspace*{30pt}%
+  \noindent%
+  \parbox[b]{\textwidth}{%
+    \parbox[t]{4ex}{\thechapter}%
+    \parbox[t]{\textwidth-4ex-1ex}%
+      {\interlinepenalty\@M\raggedright%
+        \ifthenelse{\boolean{ABNTcapchap}}%
+          {\MakeUppercase{#1}}%
+          {#1}
+      }%
+    \vspace*{0cm}
+    }\\[2pt]%
+  \vspace{50pt}%
+  }%
+}
+\makeatother
 
 % ---------- Preambulo ----------
 \instituicao{Faculdades Integradas do Brasil - Unibrasil} % nome da instituicao
@@ -209,10 +235,11 @@ Neste capítulo será apresentada em detalhes a principal tecnologia em que este t
 Através do que se tem na literatura, \acronimo{SAN}{\textit{Storage Area Network}} (\textit{Storage Area Network}) e \acronimo{NAS}{\textit{Network Attached Storage}} (\textit{Network Attached Storage}) são termos potencialmente fáceis de se confundir. NAS significa \textit{compartilhar arquivos} ao passo de que SAN significa \textit{compartilhar discos}. A principal diferença entre eles está em que o no NAS o cliente acessa arquivos e diretórios individuais compartilhados pelo servidor, no SAN o cliente tem acesso ao dispositivo físico real podendo realizar qualquer tipo de operação sobre ele \cite{fundamentals-netw-stor}.
 
 \subsection{Compartilhamento de Arquivos (NAS)}
+\label{sec-nas}
 
 O compartilhamento de arquivos é uma das formas mais comuns de \textit{storages de rede} e comumente usado nos sistemas operacionais versões \textit{home} para Windows e Macintoch. Um computador em particular (servidor de arquivos) permite outros computadores acessarem alguns dos seus arquivos e/ou diretórios. 
 
-Para compartilhar seus arquivos, um protocolo de compartilhamento de arquivos é utilizado. Os protocolos mais conhecidos nesta categoria são NFS, CIFS (formalmente chamado de SMB, a base do compartilhamento Windows e implementado no Linux pelo protocolo SAMBA), FTP, HTTP entre outros. A Figura \ref{fig-nas-san}\ref{fig-nas} mostra uma típica conexão de clientes a um servidor de arquivos através de uma \acronimo{LAN}{\textit{Local Area Network}} (\textit{Local Area Network}, ou rede local) \cite{fundamentals-netw-stor}.
+Para compartilhar seus arquivos, um protocolo de compartilhamento de arquivos é utilizado. Os protocolos mais conhecidos nesta categoria são NFS, CIFS (formalmente chamado de SMB, a base do compartilhamento Windows e implementado no Linux pelo protocolo SAMBA), FTP (\textit{File Transfer Protocol}), \sigla{HTTP}{\textit{Hypertext Transfer Protocol}} (\textit{Hypertext Transfer Protocol}) entre outros. A Figura \ref{fig-nas-san}\ref{fig-nas} mostra uma típica conexão de clientes a um servidor de arquivos através de uma \acronimo{LAN}{\textit{Local Area Network}} (\textit{Local Area Network}, ou rede local) \cite{fundamentals-netw-stor}.
 
 Em uma utilização mais realista, como por exemplo um ambiente corporativo, um servidor de arquivos normalmente possui muitos discos configurados em \acronimo{RAID}{\textit{Redundant Array of Independent Disks}} (\textit{Redundant Array of Independent Disks} --- conjunto de discos redundantes), que será tratado na Seção \ref{raid}. O servidor é formatado em um sistema de arquivos (EXT[2-4], NTFS, entre outros) e mantém um conjunto de arquivos e diretórios compartilhados com os clientes.
 
@@ -325,8 +352,11 @@ A utilização de aplicações em servidores que trabalham em modo simples, ou sem a
 %Replication means that any state information is copied verbatim to two or more server software instances in the cluster to facilitate fault tolerance and distributed operation. Usually, stateful services that are distributed must replicate client session state across the server software instances in the cluster.
 \item \textit{Replicated} (replicado): replicação significa que todas as informações são copiadas entre muitas instâncias a fim de facilitar a tolerância a falhas e o acesso distribuído. A replicação de dados será melhor entendida na Subseção \ref{raid}, quando explanado o \textit{RAID} nível 1.
 \item \textit{Load Balancing} (balanceamento de carga): quando uma requisição é feita a um serviço distribuído e a instância que recebeu esta requisição encontra-se ocupada não podendo supri-la num intervalo de tempo razoável, outra instância pode ser capaz de suprir esta requisição. O balanceamento de carga é o responsável por fazer o encaminhamento das novas requisições para o servidor menos ocupado dentro do \textit{cluster} (conjunto de softwares ou hardwares com um processamento comum). Assim, o balanceamento de carga possui a vantagem de possibilitar a utilização de todos os recursos disponíveis dentro de um \textit{cluster}.
-\item \textit{Cluster}: 
+% A cluster is made up of two or more server software instances running on one or more server computers that work together to transparently serve client requests so that the clients perceive the group as a single highly available service. The goal of the group is to provide a highly available service to network clients, while utilizing all available computing resources as efficiently as reasonably possible.
+\item \textit{Cluster}: é considerado uma ou mais instâncias de software que rodam em um ou mais servidores físicos, servindo os clientes de modo transparente e passando a impressão de que tudo funciona em conjunto como um único serviço simples altamente disponível.
 \end{itemize}
+
+Os termos citados acima são facilmente confundíveis, mas, geralmente um deles é a junção de vários outros ou é pré-requisito para que outro deles seja possível. Sendo assim, de modo geral, as ferramentas que implementam estas características implementam várias de uma só vez. No contexto do armazenamento de dados essa realidade também é semelhante, visto que as ferramentas que serão apresentadas neste trabalho realizam uma ou mais desses recursos, os quais serão apresentados nas próximas Subseções. Na Subseção \ref{raid} serão apresentados os diversos níveis de RAID e a Subseção \ref{sec-lvm} serão apresentada a ferramenta \sigla{LVM}{\textit{Logical Volume Manager}}, a qual faz o gerenciamento lógico a baixo nível de espaços de armazenamento.
 
 \subsection{Redundant Array of Inexpensive Disks (RAID)}
 \label{raid}
@@ -379,9 +409,112 @@ Outro tipo de RAID é o \textit{RAID nível 1}, mostrado na Figura \ref{fig-raid}\
 
 Os \textit{níveis 2 e 3 de RAID} não serão utilizados no desenvolvimento deste, mas merecem uma breve e
 
+\subsection{Logical Volume Manager (LVM)}
+\label{sec-lvm}
+
+O LVM (\textit{Logical Volume Manager}) é um padrão de gerenciamento de partições para discos IDE, SCSI e \textit{Fibre Channel} desenvolvido inicialmente pela empresa IBM e posteriormente seguido por outras instituições e empresas como HP. Diferente do método usualmente utilizado de particionamento de discos, o LVM junta vários discos criando um grande disco virtual tornando fácil o gerenciamento de suas partições lógicas. Assim, a sua principal vantagem consiste em um redimensionamento mais fácil das suas partições. Além disso, o LVM fornece um alto nível de visualização para a administração de grandes áreas de armazenamento em disco através das suas subdivisões em volumes físicos, grupos de volumes e volumes lógicos \cite{lvm-howto}.
+
+%Logical volume management provides a higher-level view of the disk storage on a computer system than the traditional view of disks and partitions. This gives the system administrator much more flexibility in allocating storage to applications and users.
+
+%Storage volumes created under the control of the logical volume manager can be resized and moved around almost at will, although this may need some upgrading of file system tools.
+
+%The logical volume manager also allows management of storage volumes in user-defined groups, allowing the system administrator to deal with sensibly named volume groups such as "development" and "sales" rather than physical disk names such as "sda" and "sdb".
+
+% Caso sejam usados HDs SCSI com suporte a hot-swaping, é possível adicionar, remover ou ainda substituir HDs (caso seja necessário mais espaço por exemplo), fazendo as alterações necessárias nos volumes lógicos, tudo sem interrupções. O fato do sistema ver todos os HDs instalados como uma única unidade também facilita os backups.
+
+Quando utilizam-se discos com suporte a \textit{hot-swaping} (inserção e remoção física de discos à quente --- semelhante a \textit{pendrives}), pode-se aproveitar da vantagem do LVM de adicionar, remover e substituir discos caso se deseje mais espaço em disco, por exemplo, se interrupção de serviços ou reinicialização do sistema. Isso mostra no LVM um sistema coerente com os padrões de alta disponibilidade, já que, neste caso, não exige a reinicialização do sistema.
+
+Outro recurso importante em alta disponibilidade suportado pelo LVM é a tecnologia de \textit{Snapshot}, que permite ao LVM criar cópias inteiras das partições lógicas em outras partições lógicas, tudo em um tempo bastante reduzido \cite{lvm-howto}. Isto pode ser útil em situações de \textit{backup} onde os dados a serem salvos devem não devem ser atualizados automaticamente e onde não se pode haver sobrecarga sobre os dados em uso.
+
+A Figura \ref{fig:lvm} mostra quatro discos particionados utilizando LVM. Caso fosse utilizado o particionamento comum, uma vez criadas as partições nos discos físicos (ou \textit{Hard Drivers}), estas não poderiam ser desfeitas ou reajustadas sem perdas de dados ou sem um cópia de segurança antecipada que garantisse a salvaguarda dos dados antes do particionamento. É possível observar que a Figura \ref{fig:lvm} é composta por seis camadas e, considerando uma visão \textit{bottom-up} (de cima para baixo) da mesma, o LVM é responsável pelas camadas de 3 a 5, sendo elas: (3) os volumes físicos (ou \textit{physical volumes}), (4) grupo de volumes (ou \textit{volume group}) e (5) os volumes lógicos (ou \textit{logical volumes}). As outras três camadas são utilizadas no particionamento normal, quando não se utiliza o LVM.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=.8]{./img/lvm.pdf}
+\caption{Estrutura das camadas do LVM.}
+\label{fig:lvm}
+\end{figure}
+
+Os volumes físicos representam as partições criadas nos discos rígidos e são úteis para serem apresentados ao grupo de volumes. Apesar da Figura \ref{fig:lvm} mostrar na camada 2 apenas uma partição tradicional apresentada ao grupo de volumes, um mesmo disco rígido pode ter mais de uma partição física. O grupo de volumes é o responsável por fazer todo o agrupamento dos volumes físicos e apresentar o espaço total disponível aos volumes lógicos, evitando que haja desperdícios de espaços de armazenamento --- o que é muito comum após formatar uma partição pelo método tradicional com um tamanho indesejado ou caso se mudem as necessidades tempos após a formatação, o que é também muito comum. No nível dos volumes lógicos é onde acontece o processo de formatação para o sistema de arquivos desejado (processo que no método tradicional acontece na camada 2 da Figura \ref{fig:lvm}) e assim chega-se à camada 6 da Figura \ref{fig:lvm}, ou camada de formatação do sistema de arquivos, que é a mais conhecida usualmente.
+
+Por fim, as várias características apresentadas no LVM proporcionam à solução apresentada no trabalho a flexibilidade necessária à administração e manutenção de armazenamento de dados para que este possa ser considerado altamente disponível. Somadas as características do AoE, LVM e RAID, tem-se uma estrutura de alta disponibilidade flexível, com a possível perda de discos físicos sem perda de dados, substituições de hardware sem interrupção de serviço, cópias de segurança fáceis e confiáveis e, além do mais, economia de espaço feito por um gerenciamento apropriado.
+
 \chapter{Trabalhos Correlatos}
 \label{trabalhos-correlatos}
 \vspace{-2cm}
+
+\lipsum[1-2]
+
+\section{FreeNAS}
+\label{sec-free-nas}
+
+%FreeNAS™ uses a custom version of FreeBSD and a web-based interface to provide a fully-featured NAS environment. FreeNAS™ offers software-based storage and backup solutions for a variety of applications, from home to enterprise.
+
+O FreeNAS é um \textit{appliance} (pacote de software fechado, chamado por muitos de "engessado", que possui como principal característica já vir pré-configurado) desenvolvido em uma versão customizada do sistema operacional FreeBSD juntamente com uma interface baseada em Web que possui a finalidade principal de prover um ambiente de compartilhamento de dados NAS (ver Subseção \ref{sec-nas}) para os usuários finais \cite{freenas}.
+
+Além disto, o \textit{FreeNAS} possui por baixo da sua arquitetura compartilhamento de discos ou volumes exclusivamente através do protocolo iSCSI, proporcionando também características de SAN na sua arquitetura. Deste modo, o \textit{FreeNAS} pode ser visto como duas camadas distintas, a parte SAN de estruturação de discos e conexões, e a parte NAS, que envolve o compartilhamento de seus recursos com os usuários. Tudo é configurado através da interface Web que, dentre os recursos que esta ferramenta provê, podem ser citados: 
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=\textwidth]{./img/freenas}
+\caption{Menus e tela de gerenciamento de volumes do \textit{FreeNAS}.}
+\label{fig:freenas}
+\end{figure}
+
+\begin{itemize}
+\item \sigla{FTP}{\textit{File Transfer Protocol}} (\textit{File Transfer Protocol}): provê acesso a arquivos ou a pastas dentro de um servidor. Não provê acesso criptografado, a menos que seja utilizado o SFTP, que não está disponível no \textit{FreeNAS}.
+\item \acronimo{RSYNC}{\textit{Remote Synchronization}} (\textit{Remote Synchronization}): permite a cópia e sincronismo de diretórios e arquivos com outros diretórios e arquivos, seja remotamente ou na própria máquina local.
+\item SMB/CIFS: protocolo de compartilhamento de arquivos desenvolvido pela Microsoft e utilizado por máquinas que utilizam o sistema operacional Windows (em todas as versões).
+\item NFS: semelhante ao SMB/CIFS, mas desenvolvido para ambientes Unix/Linux.
+\item \textit{Thin Provisioning}: uma tecnologia recente que permite que o espaço de armazenamento possa ser concedido além do espaço total em disco. A responsabilidade de fazer o gerenciamento de modo que o uso das cotas em excesso não cause indisponibilidade no serviço é do servidor que armazena os dados.
+\item \textit{Snapshots}: tecnologia que permite criar uma "fotografia" do estado atual do sistema de arquivos, podendo ser utilizada para um recuperação futura.
+\item RAID: provê recursos de redundância de dados e tolerância a falhas (ver Subseção \ref{raid}).
+\end{itemize}
+
+Em relação à solução proposta neste trabalho, o \textit{FreeNAS} possui semelhanças no tratamento das camadas mais baixo nível, mas, diferentemente da solução apresentada neste trabalho, utiliza o protocolo iSCSI na implantação do armazenamento SAN (apenas compartilhando o disco local, ou DAS, com outras máquinas). No alto nível (ou nível de compartilhamento com o usuário) não seria possível fazer uma comparação mais justa com a solução proposta no trabalho, visto que este trabalho se propõe a resolver problemas de compartilhamento em relação a nenhuma tecnologia de alto nível em específico, mas sim apresentar uma área de \textit{storage} de alta disponibilidade em que qualquer tecnologia de alto nível pode tomar proveito. Quanto aos recursos de alta disponibilidade e gerenciamento de disco, o Openfiler suporta RAID, LVM, além de fornecer recursos como \textit{Thin Provisioning} e \textit{Snapshots}.
+
+\section{OpenFiler}
+
+%Openfiler is a powerful, intuitive browser-based network storage software distribution. Openfiler delivers file-based Network Attached Storage and block-based Storage Area Networking in a single framework. Openfiler is built on the rPath Linux metadistribution and is distributed as a stand-alone appliance. rPath Linux is designed to make appliance development easier and is closely related to Fedora Linux. rPath Linux uses an innovative package manager called Conary which is analogous to RPM and APT. The Openfiler software stack interfaces with third-party software that is all open source.
+
+%File-based networking protocols supported by Openfiler include: NFS, SMB/CIFS, HTTP/WebDAV and FTP. Network directories supported by Openfiler include NIS, LDAP (with support for SMB/CIFS encrypted passwords), Active Directory (in native and mixed modes) and Hesiod. Authentication protocols include Kerberos 5.
+
+%Openfiler includes support for volume-based partitioning, iSCSI (target and initiator), scheduled snapshots, resource quota, and a single unified interface for share management which makes allocating shares for various network file-system protocols a breeze.
+
+O Openfiler, de modo semelhante ao FreeNAS, é um \textit{appliance} baseado em uma interface Web que é capaz de realizar tanto o compartilhamento NAS quanto SAN dentro do mesmo \textit{framework}. Além dessa semelhança, o Openfiler é também baseado numa distribuição Linux modificada, o Fedora. Por fim, o Openfiler agrupa interfaces, protocolos e softwares \textit{open-source} de terceiros na entrega de seus recursos. A Figura \ref{
+
+\begin{figure}[hb]
+\centering
+\includegraphics[width=\textwidth]{./img/openfiler}
+\caption{Tela de apresentação de LUNs iSCSI no Openfiler.}
+\label{fig:openfiler}
+\end{figure}
+
+Dentre os principais recursos suportados pelo Openfiler estão: NFS, SMB/CIFS, \acronimo{WebDAV}{\textit{Web-based Distributed Authoring and Versioning}} (\textit{Web-based Distributed Authoring and Versioning}) e FTP --- como protocolos de compartilhamento NAS; iSCSI --- como protocolo de armazenamento SAN; NIS, LDAP (com suporte a SMB/CIFS), Active Directory e Hesiod --- como diretórios de rede para gerenciamento de usuários e grupos; e, por fim, Kerberos 5 --- como protocolo de autenticação. Quanto às tecnologias de alta disponibilidade, o Openfiler é capaz de trabalhar com discos redundantes através de RAID e fazer o gerenciamento mais flexível e lógico dos discos com o LVM --- além dos recursos de \textit{Snapshot} do LVM. Vale ressaltar que o Openfiler não realiza \textit{Thin provisoning} (diferentemente do FreeNAS) o que permite uma utilização mais econômica dos dados no disco.
+
+Em relação ao trabalho apresentado, quanto aos protocolos SAN, o Openfiler trabalha somente com iSCSI, gerando todas as desvantagens já apresentadas no trabalho. Assim como no FreeNAS, é perceptível que o Openfiler pode ser comparado a este trabalho apenas nas camadas mais baixas, ou SAN, visto que o Openfiler apresenta recursos além do que é objetivo foco deste trabalho disponibilizar e estudar.
+
+\section{Google File System (GFS)}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccc}
+\hline
+\hline
+  & FreeNAS & OpenFiler & CASADU \\ 
+\hline
+\hline
+Baseado em Linux & Sim & Sim & Sim \\ 
+SAN completa & Não & Sim & Sim \\ 
+Evita Overhead TCP & Não & Não & Sim \\ 
+Alta disponibilidade em RAID & Sim & Sim & Sim \\ 
+Dinamicamente expansível com LVM & Não & Sim & Sim \\ 
+Baixo Consumo de RAM & Não & Não & Sim \\ 
+\hline 
+\hline 
+\end{tabular} 
+\caption{Comparação entre trabalhos semelhantes.}
+\end{table}
 
 \chapter{Metodologia da Pesquisa}
 \label{metodologia_pesquisa}
@@ -402,9 +535,9 @@ Aplicada e Bibliográfica.
 \section{Levantamento de Requisitos}
 \label{levantamento-requisitos}
 
-Visando um amparo mais factível que justificasse a implantação da solução tecnológica, foi realizado um levantamento de requisito junto aos alunos do Curso de Sistemas de Informação da UniBrasil, visto que estes serão os principais clientes da solução tecnológica em questão. O levantamento consistiu na aplicação de um questionário composto de perguntas de múltipla escolha em que, caso as respostas apresentadas no questionário não satisfizessem os entrevistados, estes poderiam dar uma resposta mais personalizada. Aproximadamente de $10\%$ dos alunos entrevistados responderam ao questionário.
+Visando um amparo mais factível que justificasse a implantação da solução tecnológica, foi realizado um levantamento de requisitos junto aos alunos do Curso de Sistemas de Informação da UniBrasil, visto que estes serão os principais clientes da solução tecnológica em questão. O levantamento consistiu na aplicação de um questionário composto de perguntas de múltipla escolha em que, caso as respostas apresentadas no questionário não satisfizessem os entrevistados, estes poderiam dar uma resposta mais personalizada. Aproximadamente de $10\%$ dos alunos do curso de Sistemas de Informação responderam ao questionário.
 
-As perguntas feitas no questionário foram: (a) "A sua experiência como usuário do compartilhamento de arquivos do Portal da UniBrasil em termos de velocidade e facilidade de uso?", (b) "Quando você precisa compartilhar um arquivo de aula pequeno (1KB até 10MB) com outro aluno (ou vários), o que você utiliza?", (c) "E quando o arquivo é muito grande (50M, 700MB, 4,7GB), como você faz?", (d) "Para você, a disponibilização de um serviço de compartilhamento de dados para grandes volumes de dados entre alunos e professores em que os alunos de SI pudessem utilizar para publicação de seus sites e outros serviços ser seria interessante?" e (d) "No que um serviço destes acrescentaria ao aluno de sistemas de informação?".
+As perguntas feitas no questionário foram: (a) "A sua experiência como usuário do compartilhamento de arquivos do Portal da UniBrasil em termos de velocidade e facilidade de uso?", (b) "Quando você precisa compartilhar um arquivo de aula pequeno (1KB até 10MB) com outro aluno (ou vários), o que você utiliza?", (c) "E quando o arquivo é muito grande (50M, 700MB, 4,7GB), como você faz?", (d) "Para você, a disponibilização de um serviço de compartilhamento de dados para grandes volumes de dados entre alunos e professores em que os alunos de SI pudessem utilizar para publicação de seus sites e outros serviços seria interessante?" e (d) "No que um serviço destes acrescentaria ao aluno de sistemas de informação?".
 
 Quando questionados sobre a experiência no uso da ferramenta disponibilizada aos alunos, o Portal do Aluno, $24\%$ dos entrevistados responderam que a ferramenta é "muito lenta e chata de usar", $35\%$ que é apenas "lenta e chata de usar", $6\%$ alegou que não faz diferença, $24\%$ "rápido, mas chato de usar", $1\%$ "rápido e muito bom de usar" e apenas 1 aluno alegou que "nunca usei até o recente período (5SIAN - 2 anos e meio de curso)". Com estes dados é possível verificar uma série de situações de lentidão e pouca usabilidade da ferramenta por parte do usuário. Para um grupo menor de usuários, a ferramenta existir ou não, não faz diferença, pois seu uso é pouco ou nenhum.
 
@@ -415,20 +548,19 @@ Quando questionados sobre a experiência no uso da ferramenta disponibilizada aos
 
 As principais tecnologias utilizadas, desde ferramentas, linguagens de programação e protocolos serão melhores descritas nas próximas Subseções.
 
-\subsection{AoE Tools / vBlade} 
+\subsection{AoE tools e vBlade} 
 
-O protocolo AoE (Ata over Ethernet) é utilizado na comunicação entre os dispositivos de armazenamento de dados, ou discos rígidos. Como este é um dos núcleos principal deste trabalho, foi melhor explanado na Seção \ref{subsec-aoe}. O AoE Tools é um conjunto de ferramentas gerenciamento do protocolo AoE, possibilitando executar comandos e manipular discos na \textit{máquina initiator}. Para a \textit{máquina target} é necessário a utilização do conjunto de ferramentas \textit{vBlade} (\textit{Virtual EtherDrive ® blade AoE target}) \cite{aoe-tools}. 
+O protocolo AoE (\textit{ATA over Ethernet}) é utilizado na comunicação entre os dispositivos de armazenamento de dados, ou discos rígidos. Como este é um dos núcleos principal deste trabalho, foi melhor explanado na Seção \ref{subsec-aoe}. O \textit{AoE tools} é um conjunto de ferramentas gerenciamento do protocolo AoE, possibilitando executar comandos e manipular discos na \textit{máquina initiator}. Para a \textit{máquina target} é necessário a utilização do conjunto de ferramentas \textit{vBlade} (\textit{Virtual EtherDrive blade AoE target}) \cite{aoe-tools}. 
 
 Todas as particularidades citadas acima e visto a discussão encontrada na Seção \ref{sec-analise-desempenho} tornam indispensáveis o uso destes dois conjuntos de ferramentas na implementação deste trabalho. 
 
 \subsection{PHP}
 
-O PHP (\textit{Hypertext Preprocessor}) \cite{php} é uma das linguagens de programação mais utilizadas do mundo, especialmente para o desenvolvimento web. Um dos principais objetivos do PHP é possibilitar a implantação de soluções web rápidas, simples e eficientes, o que já tem conseguido há anos. Dentre as suas principais características técnicas estão: ser estruturado e orientado a objetos, possuir portabilidade (independência de plataforma), ter tipagem dinâmica (não precisa declarar tipo), possuir sintaxe similar ao C/C++ e Perl, e, principalmente, ser open-source.
+O PHP (\textit{Hypertext Preprocessor}) \cite{php} é uma das linguagens de programação mais utilizadas do mundo, especialmente para o desenvolvimento web. Um dos principais objetivos do PHP é possibilitar a implantação de soluções web rápidas, simples e eficientes, o que já tem conseguido há anos. Dentre as suas principais características técnicas estão: ser estruturado e orientado a objetos, possuir portabilidade (independência de plataforma), ter tipagem dinâmica (não precisa declarar tipo), possuir sintaxe similar ao C/C++ e Perl, e, principalmente, ser \textit{open-source}.
 
 Para o trabalho apresentado, o PHP é importante por conta do seu requisito dentro do \textit{framework} de desenvolvimento utilizado, o CakePHP \cite{cakephp} (descrito na Subseção \ref{subsec-cake}), além das características já citadas acima.
 
 %\textbf{FERRAMENTAS:}
-
 
 \subsection{CakePHP} 
 \label{subsec-cake}
@@ -459,11 +591,11 @@ Atualmente uma versão estável do Debian versão 6.0, codinome \textit{"Squeeze"},
 
 \subsection{Apache HTTP Server} 
 
-Criado em 1995 por Rob McCool, então funcionário do NCSA (National Center for Supercomputing Applications), o servidor Apache (Servidor HTTP Apache - \textit{Apache HTTP Server}) é reconhecido pela comunidade da computação como o mais bem sucedido servidor Web código livre. Em pesquisa realizada em dezembro de 2007, foi constatado que a utilização do Apache é de $47,20$\% dos servidores no mundo \cite{apache-1}. Em maio de 2010, o Apache serviu mais de $54,68$\% de todos os sites e mais de $66$\% dos milhões de sites mais movimentados. É a principal tecnologia da \textit{Apache Software Foundation}, responsável por mais de uma dezena de projetos envolvendo tecnologias de transmissão via Web, processamento de dados e execução de aplicativos distribuídos \cite{apache-2}.
+Criado em 1995 por Rob McCool, então funcionário do NCSA (\textit{National Center for Supercomputing Applications}), o servidor Apache (Servidor HTTP Apache - \textit{Apache HTTP Server}) é reconhecido pela comunidade da computação como o mais bem sucedido servidor Web código livre. Em pesquisa realizada em dezembro de 2007, foi constatado que a utilização do Apache é de $47,20$\% dos servidores no mundo \cite{apache-1}. Em maio de 2010, o Apache serviu mais de $54,68$\% de todos os sites e mais de $66$\% dos milhões de sites mais movimentados. É a principal tecnologia da \textit{Apache Software Foundation}, responsável por mais de uma dezena de projetos envolvendo tecnologias de transmissão via Web, processamento de dados e execução de aplicativos distribuídos \cite{apache-2}.
 
 Além disso, o Apache é compatível com o protocolo HTTP versão 1.1 e funcionalidades são mantidas através de uma estrutura de módulos, permitindo inclusive que o usuário escreva seus próprios módulos — utilizando a API do software. É disponibilizado em versões para a grande maioria dos sistemas operacionais como: Windows, Novell Netware, OS/2 e diversos outros do padrão POSIX (Unix, Linux, FreeBSD, etc.) \cite{apache-foundation}.
 
-Quanto ao Apache ser gratuiro, de acordo com a Apache Software Foudation, o aplicativo Apache existe para fornecer implementações de referência robustos e de nível comercial de muitos tipos de software. Deve continuar a ser uma plataforma na qual os indivíduos, assim as instituições podem construir sistemas confiáveis, tanto para fins experimentais quanto de missão crítica. O grupo arcedita que as ferramentas de publicação \textit{on-line} devem estar nas mãos de todas as pessoas, e que as empresas de software devem utilizar o seu dinheiro para fornecer serviços de valor agregado, tais como módulos especializados e de apoio, entre outras. As empresas em geral veem tudo isto como uma vantagem econômica de modo que a empresa que possuir" um mercado - na indústria de software - significa controlar firmemente o canal de tal forma que todos devem pagar por seu uso. Isso geralmente é feito por "possuir" os meios pelos quais as empresas realizam negócios, beneficiando-se à custa de todas essas outras empresas. Na medida em que os protocolos da \textit{World Wide Web} permanecer "sem dono" por uma única empresa, a Web continuará a possuir concorrências equitativas para as empresas grandes e pequenas. Assim, a Apache Foundation acredita que a "propriedade" dos protocolos deve ser evitada. Para este fim, a existência de implementações de referência robustas de vários protocolos e interfaces de programação de aplicativo devem estar disponíveis gratuitamente para todas as empresas e indivíduos \cite{apache-foundation}.
+Quanto ao Apache ser gratuito, de acordo com a Apache Software Foudation, o aplicativo Apache existe para fornecer implementações de referência robustos e de nível comercial de muitos tipos de software. Deve continuar a ser uma plataforma na qual os indivíduos, assim as instituições podem construir sistemas confiáveis, tanto para fins experimentais quanto de missão crítica. O grupo arcedita que as ferramentas de publicação \textit{on-line} devem estar nas mãos de todas as pessoas, e que as empresas de software devem utilizar o seu dinheiro para fornecer serviços de valor agregado, tais como módulos especializados e de apoio, entre outras. As empresas em geral veem tudo isto como uma vantagem econômica de modo que a empresa que possuir" um mercado - na indústria de software - significa controlar firmemente o canal de tal forma que todos devem pagar por seu uso. Isso geralmente é feito por "possuir" os meios pelos quais as empresas realizam negócios, beneficiando-se à custa de todas essas outras empresas. Na medida em que os protocolos da \textit{World Wide Web} permanecer "sem dono" por uma única empresa, a Web continuará a possuir concorrências equitativas para as empresas grandes e pequenas. Assim, a Apache Foundation acredita que a "propriedade" dos protocolos deve ser evitada. Para este fim, a existência de implementações de referência robustas de vários protocolos e interfaces de programação de aplicativo devem estar disponíveis gratuitamente para todas as empresas e indivíduos \cite{apache-foundation}.
 
 Além disso, a Apache Software Foundation que constrói uma cultura em que aqueles que se beneficiam deste software usando-o, muitas vezes contribuem de volta a ele, fornecendo aprimoramentos de recursos, correções de bugs, e suporte para os outros nas listas públicas e \textit{newsgroups}. O esforço exercido por qualquer indivíduo em particular é relativamente pequeno, mas o produto resultante disto possui um resultado muito forte. Esses tipos de comunidades só pode acontecer com software livre --- quando alguém paga por um software, as empresas geralmente não estão dispostas a corrigir os seus erros de forma gratuita. Assim, pode-se dizer então que a força do Apache vem do fato de que ele é livre e, se fosse feito "não livre", sofreria bastante para crescer, mesmo que os recursos fosse gasto em uma equipe de desenvolvimento real \cite{apache-foundation}. Considerando as características descritas e visto que o Apache é construído para aplicações robustas baseadas em software livre, tudo isto torna o Apache HTTP Server uma ferramenta importante e justa para uso na implementação do projeto.
 
@@ -1067,15 +1199,17 @@ Drives}).
 \label{cronograma}
 \vspace{-2cm}
 
-O cronograma \ref{cronograma_fig} representa apenas uma hipótese temporal
+O Tabela \ref{cronograma_fig} representa apenas uma hipótese temporal
 projeto a ser desenvolvido, podendo ser adaptado ao longo do projeto.
 
-\begin{figure}[h]
+\begin{table}[h]
+\centering
+
     \includegraphics[scale=0.8]{img/tab-cronograma}
-	\centering
-    \caption{Cronograma do Projeto.}
-    \label{cronograma_fig}
-\end{figure} 
+
+\caption{Cronograma do Projeto.}
+\label{cronograma_fig}
+\end{table}
 
 
 %---------- Referencias ----------

@@ -2,5 +2,8 @@
 \contentsline {sigla}{\hbox to\@tempdima {NFS\hfil }{\textit {Network File System}}}{6}
 \contentsline {sigla}{\hbox to\@tempdima {SMB\hfil }{\textit {Server Message Block}}}{6}
 \contentsline {sigla}{\hbox to\@tempdima {FC\hfil }{\textit {Fibre Channel}}}{6}
-\contentsline {sigla}{\hbox to\@tempdima {AoE\hfil }{\textit {ATA Over Ethernet}}}{7}
+\contentsline {sigla}{\hbox to\@tempdima {AoE\hfil }{\textit {ATA Over Ethernet}}}{6}
+\contentsline {sigla}{\hbox to\@tempdima {HTTP\hfil }{\textit {Hypertext Transfer Protocol}}}{10}
 \contentsline {sigla}{\hbox to\@tempdima {ATA\hfil }{\textit {Advanced Technology Attachment}}}{12}
+\contentsline {sigla}{\hbox to\@tempdima {LVM\hfil }{\textit {Logical Volume Manager}}}{15}
+\contentsline {sigla}{\hbox to\@tempdima {FTP\hfil }{\textit {File Transfer Protocol}}}{19}

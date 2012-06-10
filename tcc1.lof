@@ -10,22 +10,24 @@
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {RAID n\IeC {\'\i }vel 3}}}{16}
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {RAID n\IeC {\'\i }vel 4}}}{16}
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {RAID n\IeC {\'\i }vel 5}}}{16}
-\contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura da Solu\c c\~ao.}}{24}
-\contentsline {figure}{\numberline {5}{\ignorespaces Cen\'ario de testes.}}{25}
-\contentsline {figure}{\numberline {6}{\ignorespaces Vaz\~ao dos disco alcan\c cada com diferentes par\^ametros de microbenchmark.}}{26}
-\contentsline {figure}{\numberline {7}{\ignorespaces Vaz\~ao de disco alcan\c cada por diferentes tipos de workloads em cen\'arios de execu\c c\~ao diversos. Onde indicado, o valor correto das barras foi modificado para melhor visualiza\c c\~ao dos resultados.}}{29}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-throughput}}{29}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-throughput}}{29}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-throughput}}{29}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-throughput}}{29}
-\contentsline {figure}{\numberline {8}{\ignorespaces Tempo de CPU por opera\c c\~ao de I/O em diferentes workloads.}}{30}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-cpu}}{30}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-cpu}}{30}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-cpu}}{30}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-cpu}}{30}
-\contentsline {figure}{\numberline {9}{\ignorespaces Quantidade de dados trafegado na rede (transmitido + recebido) por opera\c c\~ao.}}{31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-rede}}{31}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-rede}}{31}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-rede}}{31}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-rede}}{31}
-\contentsline {figure}{\numberline {10}{\ignorespaces Cronograma do Projeto.}}{35}
+\contentsline {figure}{\numberline {4}{\ignorespaces Estrutura das camadas do LVM.}}{18}
+\contentsline {figure}{\numberline {5}{\ignorespaces Menus e tela de gerenciamento de volumes do \textit {FreeNAS}.}}{20}
+\contentsline {figure}{\numberline {6}{\ignorespaces Tela de apresenta\c c\~ao de LUNs iSCSI no Openfiler.}}{21}
+\contentsline {figure}{\numberline {7}{\ignorespaces Arquitetura da Solu\c c\~ao.}}{28}
+\contentsline {figure}{\numberline {8}{\ignorespaces Cen\'ario de testes.}}{29}
+\contentsline {figure}{\numberline {9}{\ignorespaces Vaz\~ao dos disco alcan\c cada com diferentes par\^ametros de microbenchmark.}}{31}
+\contentsline {figure}{\numberline {10}{\ignorespaces Vaz\~ao de disco alcan\c cada por diferentes tipos de workloads em cen\'arios de execu\c c\~ao diversos. Onde indicado, o valor correto das barras foi modificado para melhor visualiza\c c\~ao dos resultados.}}{34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-throughput}}{34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-throughput}}{34}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-throughput}}{34}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-throughput}}{34}
+\contentsline {figure}{\numberline {11}{\ignorespaces Tempo de CPU por opera\c c\~ao de I/O em diferentes workloads.}}{35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-cpu}}{35}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-cpu}}{35}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-cpu}}{35}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-cpu}}{35}
+\contentsline {figure}{\numberline {12}{\ignorespaces Quantidade de dados trafegado na rede (transmitido + recebido) por opera\c c\~ao.}}{36}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces webserver-rede}}{36}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces fileserver-rede}}{36}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces varmail-rede}}{36}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces oltp-rede}}{36}
